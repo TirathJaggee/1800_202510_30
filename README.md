@@ -8,7 +8,7 @@ Example:
 
 This client-side JavaScript web application provides real-time weather updates for cities worldwide. It simplifies accessing weather information through an intuitive mobile-first interface, allowing users to input a city name and receive data on temperature, humidity, and conditions.
 
-Developed for the [Course Name] course, applying User-Centred Design practices, agile project management processes, integrating a weather API, and Firebase backend services.
+Developed for the 1800-Projects course, applying User-Centred Design practices, agile project management processes, integrating a weather API, and Firebase backend services.
 
 ---
 
@@ -59,11 +59,10 @@ project-name/
 
 ## Contributors
 <<<<<<< HEAD
-- **Alexander Fisher** - BCIT CST Student with a passion for video games and chilling. 
-- **Alexander Fisher** - BCIT CST Student, with a passion for video games and chilling. THE TEAM LEADER.
+- **Alexander Fisher** - BCIT CST Student with a passion for video games and chilling. THE TEAM LEADER.
+- **Nicolas Agostini** - BCIT CST Student, with a passion for technology and AI.
 =======
 - **Tirath** - I go to BCIT to study CST! I chose BCIT because the course is accelerated!
-- **Teammate Name** - BCIT CST Student, Frontend enthusiast with a knack for creative design. Fun fact: Has a collection of over 50 houseplants.
 >>>>>>> dc11d46ef454e079f4b739f57b4b3cbd47c4f3c0
 
 ---
