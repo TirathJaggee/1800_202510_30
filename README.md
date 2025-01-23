@@ -58,12 +58,13 @@ project-name/
 ---
 
 ## Contributors
-<<<<<<< HEAD
+
 - **Alexander Fisher** - BCIT CST Student with a passion for video games and chilling. THE TEAM LEADER.
+
 - **Nicolas Agostini** - BCIT CST Student, with a passion for technology and AI.
-=======
+
 - **Tirath** - I go to BCIT to study CST! I chose BCIT because the course is accelerated!
->>>>>>> dc11d46ef454e079f4b739f57b4b3cbd47c4f3c0
+
 
 ---
 
