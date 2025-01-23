@@ -58,8 +58,13 @@ project-name/
 ---
 
 ## Contributors
+<<<<<<< HEAD
 - **Alexander Fisher** - BCIT CST Student with a passion for video games and chilling. 
 - **Alexander Fisher** - BCIT CST Student, with a passion for video games and chilling. THE TEAM LEADER.
+=======
+- **Tirath** - I go to BCIT to study CST! I chose BCIT because the course is accelerated!
+- **Teammate Name** - BCIT CST Student, Frontend enthusiast with a knack for creative design. Fun fact: Has a collection of over 50 houseplants.
+>>>>>>> dc11d46ef454e079f4b739f57b4b3cbd47c4f3c0
 
 ---
 
