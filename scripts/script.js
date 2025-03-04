@@ -1,4 +1,6 @@
 function sayHello() {
-    
+    console.log("Hello!");
 }
-//sayHello();
+document.getElementById("firstImage").addEventListener("click", sayHello());
+
+document.getElementById("secondImage").addEventListener("click", sayHello());
