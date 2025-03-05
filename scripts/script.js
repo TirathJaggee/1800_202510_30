@@ -1,10 +1,4 @@
-//---------------------------------
-// Your own functions here
-//---------------------------------
-
-//------------------------------------------------
-// Call this function when the "logout" button is clicked
-//-------------------------------------------------
+// document.getElementById("secondImage").addEventListener("click", sayHello());
 function logout() {
     firebase.auth().signOut().then(() => {
         // Sign-out successful.
@@ -14,7 +8,7 @@ function logout() {
       });
 }
 
-function sayHello() {
-    //do something
-}
+// function sayHello() {
+//     //do something
+// }
 //sayHello();    //invoke function
