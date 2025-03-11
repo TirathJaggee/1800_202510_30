@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The SmartChoice</title>
+    <meta name="The SmartChoice" content="1800 Projects">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap Library CSS CDN go here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Boostrap Library JS CDN  go here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Other libraries go here -->
+
+  <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+    <!-- Link to styles of your own -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Icons (Material Design)-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <div id="navbarPlaceholder"></div>
+
+</head>
+
+<body>
+
+    <!------------------------------>
+    <!-- Your HTML Layout go here -->
+     <!-- Navbar -->
+
+  <!-- HERO -->
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-6 fw-bold">Come Join The Fun!</h1>
+    <div class="container">
+        <h3>Choose the food with less calories in a portion of 200g:</h3>
+        <div class="row">
+          <div class="col-md-6 col-6">
+            <button id="firstImage" value="beef"><img
+              src="images/beef.jpeg"
+              class="w-100"></button>
+          </div>
+          <div class="col-md-6 col-6">
+            <button id="secondImage" value="fries"><img
+              src="images/fries.jpg"
+              class="w-100"></button>
+          </div>
+        </div>
+  </div>
+  <div id="footerPlaceholder">
+  </div>
+
+    <!-- Link to scripts of your own -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/firebaseAPI_BBY30.js"></script>
+    <script src="scripts/skeleton.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script>
+      checkLogin();
+    </script>
+  </body>
+
+</html>

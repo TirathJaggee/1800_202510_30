@@ -4,7 +4,7 @@
 <head>
     <title>The Smart Choice</title>
     <meta name="The SmartChoice" content="1800 Projects">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -30,20 +30,11 @@
 
 
     <!-- Link to styles of your own -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <!-- Google Icons (Material Design)-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a href="index.html">
-          <span class="material-icons">arrow_back</span>
-        </a>
-        <span class="navbar-brand text-center">TheSmartChoice</span>
-        <span class="material-icons">account_circle</span>
-  
-      </div>
-    </nav>
+    <div id="navbarPlaceholder"></div>
 
 </head>
 
@@ -55,29 +46,22 @@
         The app helps users develop a strong intuition on nutritional value of different foods.
       </p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-        <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3"><a href="game.html">Play Now!</a></button>
+        <a class="btn btn-primary" href="/game" role="button">Play now!</a>
       </div>
     </div>
+
     <div class="overflow-hidden" style="max-height: 30vh;">
     </div>
+    
   </div>
-  <footer class="navbar justify-content-evenly bg-info fixed-bottom">
-     <div class="container">
-      <a href="leaderboard.html"> 
-        <span class="material-icons">emoji_events</span> 
-        </a> 
-      <a href="learn.html">
-        <span class="material-icons">menu_book</span>
-        </a>
-      <a href="store.html">
-        <span class="material-icons">store</span>
-        </a>
-     </div>
-  </footer>
+
+  <div id="footerPlaceholder">
+  </div>
 
 
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/firebaseAPI_BBY30.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/firebaseAPI_BBY30.js"></script>
+    <script src="scripts/skeleton.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
     <script>
