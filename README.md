@@ -29,6 +29,7 @@ Developed for the **BCIT CST 1800-Projects** course, this application applies **
 ## Deployment
 1. Install Node.js
 2. Install ``` npm install express ```
+3. Install ``` npm install cors ```
 3. run ```npm server.js```
 
 ## Project Structure
