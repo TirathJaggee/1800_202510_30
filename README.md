@@ -1,101 +1,92 @@
-
-# Project Name
+# SmartChoice
 
 ## Overview
-Summarize your project's purpose, problem solved, key features, user benefits, development context, and main technologies used.
+SmartChoice is an educational web application designed to help users develop a strong intuition about the nutritional value of different foods. Through an interactive game format, users can learn to make healthier dietary choices by comparing the caloric content of various food items.
 
-Example:
-
-This client-side JavaScript web application provides real-time weather updates for cities worldwide. It simplifies accessing weather information through an intuitive mobile-first interface, allowing users to input a city name and receive data on temperature, humidity, and conditions.
-
-Developed for the 1800-Projects course, applying User-Centred Design practices, agile project management processes, integrating a weather API, and Firebase backend services.
-
----
+Developed for the **BCIT CST 1800-Projects** course, this application applies **User-Centered Design** practices and **agile project management** processes, integrating **Firebase** for authentication and backend services.
 
 ## Features
-
-Example:
-- Real-time weather updates for any city.
-- Responsive design for desktop and mobile.
-- Displays temperature, humidity, and weather conditions.
-
----
+- **Interactive food comparison game** that tests users' knowledge of caloric content
+- **User authentication system** with login/logout functionality
+- **Responsive design** for desktop and mobile devices
+- **Leaderboard** to track user progress and achievements
+- **Educational resources** about nutrition and healthy eating
 
 ## Technologies Used
-
-Example:
-- **Frontend**: HTML, CSS, JavaScript
-- **Backend**: Firebase for hosting
-- **Database**: Firestore
-- **API**: OpenWeatherMap API
-
----
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap 5
+- **Backend:** Node.js, Express.js
+- **Database:** Firebase Firestore
+- **Authentication:** Firebase Authentication
+- **Hosting:** Firebase Hosting
 
 ## Usage
+1. Open your browser and visit the application URL.
+2. Create an account or log in to your existing account.
+3. Navigate to the game page to start playing.
+4. Choose between two food items to identify which has fewer calories per **200g portion**.
+5. Track your progress on the leaderboard and learn more about nutrition through the educational resources.
 
-Example:
-1. Open your browser and visit `http://localhost:3000`.
-2. Enter the name of the city in the search bar and press enter.
-3. View the weather information displayed on the screen.
-
----
+## Deployment
+1. Install Node.js
+2. Install ``` npm install express ```
+3. run ```npm server.js```
 
 ## Project Structure
-
-Example:
 ```
-project-name/
-├── src/
-│   ├── index.html
-│   ├── style.css
-│   ├── app.js
-│   └── components/
+smartchoice/
+├── public/
+│   ├── css/
+│   ├── html/
+│   │   ├── game.html
+│   │   ├── index.html
+│   │   ├── leaderboard.html
+│   │   ├── learn.html
+│   │   ├── login.html
+│   │   ├── main.html
+│   │   ├── store.html
+│   │   ├── navbar_loggedin.html
+│   │   ├── navbar_loggedout.html
+│   │   ├── footer_loggedin.html
+│   │   └── footer_loggedout.html
+│   ├── images/
+│   └── js/
+├── scripts/
+│   ├── authentication.js
+│   ├── firebaseAPI_BBY30.js
+│   ├── gameScript.js
+│   ├── script.js
+│   └── skeleton.js
+├── server.js
 ├── package.json
 ├── README.md
 └── .gitignore
 ```
 
----
-
 ## Contributors
-
-- **Alexander Fisher** - BCIT CST Student with a passion for video games and chilling. THE TEAM LEADER.
-
+- **Alexander Fisher** - BCIT CST Student with a passion for video games and chilling.
 - **Nicolas Agostini** - BCIT CST Student, with a passion for technology and AI.
-
-- **Tirath** - I go to BCIT to study CST! I chose BCIT because the course is accelerated!
-
-
----
+- **Tirath Jaggee** - BCIT CST Student. Chose BCIT because the course is accelerated!
 
 ## Acknowledgments
-
-Example:
-- Weather data sourced from [OpenWeatherMap](https://openweathermap.org/).
-- Code snippets for ___ algoirthm were adapted from resources such as [Stack Overflow](https://stackoverflow.com/) and [MDN Web Docs](https://developer.mozilla.org/).
-- Icons sourced from [FontAwesome](https://fontawesome.com/) and images from [Unsplash](https://unsplash.com/).
-
----
+- **Bootstrap** framework for responsive design components
+- **Firebase** for authentication and database services
+- **Icons** sourced from Google Material Icons
+- **BCIT School of Computing and Academic Studies**
 
 ## Limitations and Future Work
 ### Limitations
-
-Example:
-- Currently, the app only supports city-based weather searches.
-- Limited to basic weather parameters like temperature, humidity, and conditions.
-- The user interface can be further enhanced for accessibility.
+- Currently limited to a small set of food comparisons
+- Basic game mechanics without progression levels
+- Limited educational content
 
 ### Future Work
-
-Example: 
-- Add support for location-based weather detection using GPS.
-- Implement additional weather parameters like wind speed and UV index.
-- Create a dark mode for better usability in low-light conditions.
-- Integrate user accounts for saving favorite locations.
-
----
+- Expand the food database with more diverse options
+- Implement difficulty levels and game progression
+- Add more detailed nutritional information beyond calories
+- Develop a personalized learning path based on user performance
+- Implement social features to allow users to challenge friends
+- Create a mobile app version for improved accessibility
 
 ## License
+This project is created for educational purposes as part of the **BCIT CST program**.
 
-Example:
-This project is licensed under the MIT License. See the LICENSE file for details.
