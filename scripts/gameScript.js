@@ -74,6 +74,42 @@ questionsRef.add({
     image1: "./images/questions/pretzels.jpg",
     image2: "./images/questions/nachos.jpg"
 });
+questionsRef.add({
+    answer: 2,
+    category: "fats",
+    description: "Which has fewer calories?",
+    image1: "./images/questions/whole_milk.jpg",
+    image2: "./images/questions/skim_milk.jpg"
+});
+questionsRef.add({
+    answer: 1,
+    category: "vitamins",
+    description: "Which has fewer calories?",
+    image1: "./images/questions/watermelon.jpg",
+    image2: "./images/questions/mango.jpg"
+});
+questionsRef.add({
+    answer: 1,
+    category: "protien",
+    description: "Which has fewer calories?",
+    image1: "./images/questions/grilled_chicken_sandwich.jpg",
+    image2: "./images/questions/cheeseburger.jpg"
+});
+questionsRef.add({
+    answer: 1,
+    category: "fats",
+    description: "Which has fewer calories?",
+    image1: "./images/questions/popcorn.jpg",
+    image2: "./images/questions/potato_chips.jpg"
+});
+questionsRef.add({
+    answer: 1,
+    category: "protien",
+    description: "Which has fewer calories?",
+    image1: "./images/questions/shrimp.jpg",
+    image2: "./images/questions/fried_fish.jpg"
+});
+
 
 
 
