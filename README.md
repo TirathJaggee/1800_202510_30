@@ -37,30 +37,32 @@ Developed for the **BCIT CST 1800-Projects** course, this application applies **
 smartchoice/
 ├── public/
 │   ├── css/
+│   │   └── style.css
 │   ├── html/
+│   │   ├── footer_loggedin.html
+│   │   ├── footer_loggedout.html
 │   │   ├── game.html
+│   │   ├── game_stage1.html
 │   │   ├── index.html
 │   │   ├── leaderboard.html
 │   │   ├── learn.html
 │   │   ├── login.html
 │   │   ├── main.html
-│   │   ├── store.html
 │   │   ├── navbar_loggedin.html
 │   │   ├── navbar_loggedout.html
-│   │   ├── footer_loggedin.html
-│   │   └── footer_loggedout.html
+│   │   ├── profile.html
+│   │   └── store.html
 │   ├── images/
 │   └── js/
+│       └── main.js
 ├── scripts/
 │   ├── authentication.js
-│   ├── firebaseAPI_BBY30.js
 │   ├── gameScript.js
+│   ├── profile.js
 │   ├── script.js
 │   └── skeleton.js
 ├── server.js
-├── package.json
-├── README.md
-└── .gitignore
+└── README.md
 ```
 
 ## Contributors
@@ -87,6 +89,7 @@ smartchoice/
 - Develop a personalized learning path based on user performance
 - Implement social features to allow users to challenge friends
 - Create a mobile app version for improved accessibility
+- Dockerize the application
 
 ## License
 This project is created for educational purposes as part of the **BCIT CST program**.
