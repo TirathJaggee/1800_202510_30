@@ -53,6 +53,11 @@ app.get("/store", (req, res) => {
     res.send(doc);
 });
 
+app.get("/profile", (req, res) => {
+    let doc = fs.readFileSync("./public/html/profile.html", "utf8");
+    res.send(doc);
+});
+
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });

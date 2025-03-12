@@ -4,7 +4,7 @@
 <head>
   <title>The SmartChoice</title>
   <meta name="The SmartChoice" content="1800 Projects">
-  <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="images/favicon.png">
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -18,9 +18,9 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <!-- Other libraries go here -->
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
 
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -32,6 +32,7 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  
 
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="css/style.css">
@@ -39,21 +40,40 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-
 </head>
 
 <body>
+
   <div id="navbarPlaceholder"></div>
 
   <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h1 class="display-4 fw-bold">All you need for your profile!</h1>
-    <h2>The hottest deals are waiting for you!</h2>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">// TO DO (list the deals and store items)
-      </p>
-    </div>
-    <div class="overflow-hidden" style="max-height: 30vh;">
-    </div>
+    <h1 class="display-4 fw-bold">Profile: </h1>
+    <div class="container">
+        <h1>User Profile </h1>
+        <form>
+            <fieldset class="mb-3" id="personalInfoFields" disabled>
+                <div class="form-group">
+                    <label >Name</label>
+                    <input type="text" id="nameInput" class="form-control" placeholder="Name">
+                </div>
+            </fieldset>
+            <fieldset class="mb-3" disabled>
+            <div class="form-group">
+                <label >Email</label>
+                <input type="text" id="emailInput" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label >Score</label>
+                <input type="text" id="userScore" class="form-control" placeholder="0">
+            </div>
+            </fieldset>
+            <div class="d-flex justify-content-end mt-5">
+                <button type="button" onclick="editUserInfo()" class="btn btn-secondary">Edit</button>
+                <span style="width: 10px"></span>
+                <button type="button" onclick="saveUserInfo()" class="btn btn-info">Save</button>
+            </div>
+        </form>
+</div>
   </div>
 
   <div id="footerPlaceholder">
@@ -63,8 +83,10 @@
   <script src="scripts/script.js"></script>
   <script src="scripts/firebaseAPI_BBY30.js"></script>
   <script src="scripts/skeleton.js"></script>
+  <script src="scripts/profile.js"></script>
   <script>
     checkLogin();
+    populateUserInfo();
   </script>
 </body>
 
