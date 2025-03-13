@@ -10,7 +10,6 @@ function loadScreen() {
         });
     });
 }
-<<<<<<< HEAD
 function loadQuestions() {
     db.collection( "questions" ).get()
         .then( doc => {

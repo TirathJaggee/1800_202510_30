@@ -14,6 +14,9 @@ function populateUserInfo() {
                 let userName = userDoc.data().name;
                 let userEmail = userDoc.data().email;
                 let userScore = userDoc.data().score;
+                let userNumCorrect = userDoc.data().num_correct;
+                let userNumWrong = userDoc.data().num_wrong;
+                let userGems = userDoc.data().gems;
 
                 //if the data fields are not empty, then write them in to the form.
                 if (userName != null) {
@@ -24,6 +27,15 @@ function populateUserInfo() {
                 }
                 if (userScore != null) {
                     document.getElementById("userScore").value = userScore;
+                }
+                if (userNumCorrect != null) {
+                    document.getElementById("userNumCorrect").value = userNumCorrect;
+                }
+                if (userNumWrong != null) {
+                    document.getElementById("userNumWrong").value = userNumWrong;
+                }
+                if (userGems != null) {
+                    document.getElementById("userGems").value = userGems;
                 }
             })
             } else {
