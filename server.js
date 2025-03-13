@@ -36,6 +36,10 @@ app.get("/game", (req, res) => {
     let doc = fs.readFileSync("./public/html/game.html", "utf8");
     res.send(doc);
 });
+app.get("/game_stage1", (req, res) => {
+    let doc = fs.readFileSync("./public/html/game_stage1.html", "utf8");
+    res.send(doc);
+});
 app.get("/leaderboard", (req, res) => {
     let doc = fs.readFileSync("./public/html/leaderboard.html", "utf8");
     res.send(doc);
@@ -81,35 +85,3 @@ app.get("/profile", (req, res) => {
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });
-
-
-// // Load comments
-// app.get("/comments", (req, res) => {
-//     fs.readFile(COMMENTS_FILE, (err, data) => {
-//         if (err) {
-//             return res.status(500).json({ error: "Error reading comments" });
-//         }
-//         res.json(JSON.parse(data));
-//     });
-// });
-
-// // Add a new comment
-// app.post("/comments", (req, res) => {
-//     const newComment = {
-//         name: req.body.name,
-//         comment: req.body.comment,
-//         timestamp: new Date().toISOString()
-//     };
-
-//     fs.readFile(COMMENTS_FILE, (err, data) => {
-//         const comments = err ? [] : JSON.parse(data);
-//         comments.push(newComment);
-
-//         fs.writeFile(COMMENTS_FILE, JSON.stringify(comments, null, 2), (err) => {
-//             if (err) {
-//                 return res.status(500).json({ error: "Error saving comment" });
-//             }
-//             res.json(newComment);
-//         });
-//     });
-// });
