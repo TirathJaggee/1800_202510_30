@@ -4,7 +4,7 @@
 <head>
   <title>The SmartChoice</title>
   <meta name="The SmartChoice" content="1800 Projects">
-  <link rel="icon" type="image/x-icon" href="images/favicon.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -32,10 +32,10 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-  
+
 
   <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/leaderboard.css">
   <!-- Google Icons (Material Design)-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -44,28 +44,71 @@
 
 <body>
 
+
   <div id="navbarPlaceholder"></div>
 
   <div class="px-4 pt-5 my-5 text-center border-bottom">
     <h1 class="display-4 fw-bold">Check where you stand! The leaderboard of the most active players!</h1>
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">// TO DO (list the leaderboard categories)
-      </p>
+      <p class="lead mb-4">// TO DO (list the leaderboard categories) </p>
     </div>
     <div class="overflow-hidden" style="max-height: 30vh;">
     </div>
   </div>
+ 
 
-  <div id="footerPlaceholder">
+  <ul class="leaderboard">
+    <li class="leaderboard-item">
+      <span class="rank">1</span>
+      <span class="material-icons user-icon">person</span>
+      <span class="username">User</span>
+      <div class="progress-bar"></div>
+    </li>
+    <li class="leaderboard-item">
+      <span class="rank">2</span>
+      <span class="material-icons user-icon">person</span>
+      <span class="username">User</span>
+      <div class="progress-bar"></div>
+    </li>
+    <li class="leaderboard-item">
+      <span class="rank">3</span>
+      <span class="material-icons user-icon">person</span>
+      <span class="username">User</span>
+      <div class="progress-bar"></div>
+    </li>
+    <li class="leaderboard-item">
+      <span class="rank">4</span>
+      <span class="material-icons user-icon">person</span>
+      <span class="username">User</span>
+      <div class="progress-bar"></div>
+    </li>
+    <li class="leaderboard-item">
+      <span class="rank">5</span>
+      <span class="material-icons user-icon">person</span>
+      <span class="username">User</span>
+      <div class="progress-bar"></div>
+    </li>
+  </ul>
   </div>
 
+  <div id="footerPlaceholder"> </div>
 
-  <script src="scripts/script.js"></script>
-  <script src="scripts/firebaseAPI_BBY30.js"></script>
-  <script src="scripts/skeleton.js"></script>
-  <script>
-    checkLogin();
-  </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+<script src="/scripts/script.js"></script>
+<script src="/scripts/firebaseAPI_BBY30.js"></script>
+<script src="/scripts/skeleton.js"></script>
+<script>
+  checkLogin();
+</script>
 </body>
 
 </html>

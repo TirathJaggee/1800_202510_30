@@ -44,6 +44,26 @@ app.get("/learn", (req, res) => {
     let doc = fs.readFileSync("./public/html/learn.html", "utf8");
     res.send(doc);
 });
+app.get("/learn/carbohydrates", (req, res) => {
+    let doc = fs.readFileSync("./public/html/carbohydrates.html", "utf8");
+    res.send(doc);
+});
+app.get("/learn/protein", (req, res) => {
+    let doc = fs.readFileSync("./public/html/protein.html", "utf8");
+    res.send(doc);
+});
+app.get("learn/vitamins", (req, res) => {
+    let doc = fs.readFileSync("./public/html/vitamins.html", "utf8");
+    res.send(doc);
+});
+app.get("/learn/supplementation", (req, res) => {
+    let doc = fs.readFileSync("./public/html/supplementation.html", "utf8");
+    res.send(doc);
+});
+app.get("/learn/workouts", (req, res) => {
+    let doc = fs.readFileSync("./public/html/workouts.html", "utf8");
+    res.send(doc);
+});
 app.get("/login", (req, res) => {
     let doc = fs.readFileSync("./public/html/login.html", "utf8");
     res.send(doc);

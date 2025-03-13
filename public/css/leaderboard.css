@@ -1,0 +1,138 @@
+/*
+* --------------------------------------------
+* Custom styles to override the default Bootstrap ones
+* --------------------------------------------
+*/
+
+/* New Color Palette:
+* Lightest (Text):         #f2fbf2      (text, contrast with dark)
+* Dark Green (Primary):    #005a00      
+* Light Green (Secondary): #72b372      (canvas background)
+* Reddish-Brown (Accent):  #b75858
+*/
+
+.bg-info {
+    background-color: #72b372 !important; /* Light green for secondary backgrounds */
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+    color: #005a00;            /* Dark green for brand name & nav links for visibility */
+}
+
+.btn-info {
+    color: #f2fbf2;            /* Lightest shade for text on info button for contrast */
+    background-color: #72b372; /* Light green for button background */
+    border-color: #005a00;     /* Dark green for button border */
+}
+
+.btn-primary {
+    color: #f2fbf2;            /* Lightest shade for text */
+    font-size: 150%;
+    background-color: #005a00; /* Dark green for primary button background */
+    border: 0;
+}
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: #f2fbf2;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f5fbe7;
+    overflow: hidden; 
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: white;
+}
+
+.title {
+    font-size: 20px;
+    color: green;
+}
+
+/* This will bug out the page */
+/* .container {
+    flex: 1;
+    overflow-y: auto; 
+    padding: 20px;
+} */
+
+
+.leaderboard {
+    list-style: none;
+    padding: 0;
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    background: white; 
+}
+
+.rank {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.user-icon {
+    font-size: 40px;
+    color: black;
+    border: 2px solid #000; 
+    border-radius: 50%; 
+    padding: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #f0f0f0; 
+}
+
+.username {
+    flex: 1;
+    font-weight: bold;
+}
+
+
+.progress-bar {
+    width: 100px;
+    height: 10px;
+    background: lightgray;
+    border-radius: 5px;
+}
+
+
+.icon {
+    font-size: 20px;
+    color: white;
+}
+
+
