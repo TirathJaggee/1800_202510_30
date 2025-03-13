@@ -1,0 +1,89 @@
+/*
+* --------------------------------------------
+* Custom styles to override the default Bootstrap ones
+* --------------------------------------------
+*/
+
+/* New Color Palette:
+* Lightest (Text):         #f2fbf2      (text, contrast with dark)
+* Dark Green (Primary):    #005a00      
+* Light Green (Secondary): #72b372      (canvas background)
+* Reddish-Brown (Accent):  #b75858
+*/
+
+.bg-info {
+    background-color: #72b372 !important; /* Light green for secondary backgrounds */
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+    color: #005a00;            /* Dark green for brand name & nav links for visibility */
+}
+
+.btn-info {
+    color: #f2fbf2;            /* Lightest shade for text on info button for contrast */
+    background-color: #72b372; /* Light green for button background */
+    border-color: #005a00;     /* Dark green for button border */
+}
+
+.btn-primary {
+    color: #f2fbf2;            /* Lightest shade for text */
+    font-size: 150%;
+    background-color: #005a00; /* Dark green for primary button background */
+    border: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+.container {
+    width: 90%;
+    max-width: 600px;
+}
+.item {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+.item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: 2px solid blue;
+    display: block;
+}
+.number {
+    width: 30px;
+    height: 30px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 10px;
+}
+.text {
+    flex-grow: 1;
+    border-bottom: 1px solid black;
+    font-size: 1rem;
+    text-align: left;
+}
+
