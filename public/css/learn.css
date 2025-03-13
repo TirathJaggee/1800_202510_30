@@ -31,23 +31,19 @@
     background-color: #005a00; /* Dark green for primary button background */
     border: 0;
 }
-
-
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
-    text-align: center;
 }
+
+
 .container {
     width: 90%;
     max-width: 600px;
+    justify-content: center;
+    align-items: center;
 }
 .item {
     display: flex;
