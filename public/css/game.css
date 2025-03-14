@@ -1,0 +1,19 @@
+fieldset {
+    display: flex;
+    justify-content: center;
+}
+
+.first_image_button {
+    width: 45vw;
+}
+
+.first_image_button img {
+    width: 100%;
+}
+.second_image_button {
+    width: 45vw;
+}
+
+.second_image_button img {
+    width: 100%;
+}
