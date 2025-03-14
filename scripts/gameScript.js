@@ -1,48 +1,74 @@
-// function loadScreen() {
-//     $('#game_placeholder').load('/html/game_stage1.html', function () {
-//         // This callback runs after the content is loaded
-//         // Now it's safe to attach event listeners to elements in the loaded content
-//         document.getElementById("firstImage").addEventListener("click", () => {
-//             checkAnswer(document.getElementById("firstImage").value);
-//         });
-//         document.getElementById("secondImage").addEventListener("click", () => {
-//             checkAnswer(document.getElementById("secondImage").value);
-//         });
-//     });
-// }
-let correctAnswers = [];
+let userScore = 0;
 let userAnswers = [];
-let questionsIds = [];
+let availableQuestions = [];
+let usedQuestions = [];
+let rounds = 0;
+let i = 0;
 
 async function display() {
     const snapshot = await db.collection('questions').get();
+
     // console.log(snapshot.docs.map(doc => doc.data()));
-    i = Math.floor(Math.random() * 15);
+    i = Math.floor(Math.random() * snapshot.docs.length);
+    while(usedQuestions.includes(snapshot.docs[i].id)) {
+        i = Math.floor(Math.random() * snapshot.docs.length);
+    }
+
+
+    // Remove existing event listeners before adding new ones
+    const firstButton = document.getElementById("firstImageButton");
+    const secondButton = document.getElementById("secondImageButton");
+    
+    // Clone and replace buttons to remove all event listeners
+    const firstButtonClone = firstButton.cloneNode(true);
+    const secondButtonClone = secondButton.cloneNode(true);
+    firstButton.parentNode.replaceChild(firstButtonClone, firstButton);
+    secondButton.parentNode.replaceChild(secondButtonClone, secondButton);
+
+
 
     let question = snapshot.docs[i].data();
     // console.log(question);
     let questionId = snapshot.docs[i].id;
-    questionsIds.push(questionId);
+    usedQuestions.push(questionId);
     let correctAnswer = question.answer;
-    correctAnswers.push(correctAnswer);
     let description = question.description;
     let image1 = question.image1;
     let image2 = question.image2;
-    let category = question.category;
 
     document.getElementById('description').textContent = description;
     document.getElementById('firstImage').src = image1;
     document.getElementById('secondImage').src = image2;
-}
+    document.getElementById("firstImageButton").value = 1;
+    document.getElementById("secondImageButton").value = 2;
 
-function checkAnswer() {
     document.getElementById("firstImageButton").addEventListener("click", () => {
-        userAnswers.push(document.getElementById("firstImageButton").value);
+        handleAnswer(1, correctAnswer);
     });
     document.getElementById("secondImageButton").addEventListener("click", () => {
-        userAnswers.push(document.getElementById("secondImageButton").value);
+        handleAnswer(2, correctAnswer);
     });
-    display();
 }
-console.log("User Answers: ", userAnswers);
-console.log("Correct Answers: ", correctAnswers);
+
+function handleAnswer(selectedValue, correctAnswer) {
+    if(selectedValue == correctAnswer) {
+        userScore++;
+    }
+    
+    rounds++;
+    
+    if(rounds < 5) {
+        display();
+        console.log("User Score: ", userScore);
+    } else {
+        localStorage.setItem("userScoreLS", userScore);
+        userScore = 0;
+        rounds = 0;
+        window.location.href = '/results';
+    }
+}
+
+function displayResults() {
+    document.getElementById('description').textContent = `You got ${localStorage.getItem("userScoreLS")} out of 5 correct!`;
+    localStorage.setItem("userScoreLS", 0);
+}

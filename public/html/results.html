@@ -42,17 +42,13 @@
   <div class="px-4 pt-5 my-5 text-center border-bottom">
     <h1 class="display-6 fw-bold">Come Join The Fun!</h1>
 
-    <!-- <div class="container" id="game_placeholder"></div> -->
-    <div class="row">
-      <div id="description"></div>
-      <fieldset>
-        <div class="col-md-6 col-6">
-          <button id="firstImageButton" value="fries"><img id="firstImage" src="/images/fries.jpg" class="w-100"></button>
+    <div class="container">
+        <div class="row">
+            <div id="description"></div>
         </div>
-        <div class="col-md-6 col-6">
-          <button id="secondImageButton" value="chicken"><img id="secondImage" src="/images/fried_chicken.jpg" class="w-100"></button>
-        </div>
-      </fieldset>
+        <a class="btn btn-primary" role="button" href="/game">
+            <div class="text">Play Again</div>
+        </a>
     </div>
 
     
@@ -67,7 +63,7 @@
     <script src="/scripts/gameScript.js"></script>
     <script>
       checkLogin();
-      display();
+      displayResults();
     </script>
   </body>
 

@@ -36,8 +36,8 @@ app.get("/game", (req, res) => {
     let doc = fs.readFileSync("./public/html/game.html", "utf8");
     res.send(doc);
 });
-app.get("/game_stage1", (req, res) => {
-    let doc = fs.readFileSync("./public/html/game_stage1.html", "utf8");
+app.get("/results", (req, res) => {
+    let doc = fs.readFileSync("./public/html/results.html", "utf8");
     res.send(doc);
 });
 app.get("/leaderboard", (req, res) => {
