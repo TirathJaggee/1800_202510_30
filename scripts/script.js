@@ -1,4 +1,3 @@
-// document.getElementById("secondImage").addEventListener("click", sayHello());
 function logout() {
     firebase.auth().signOut().then(() => {
         // Sign-out successful.
@@ -22,8 +21,3 @@ function checkLogin(){
     }
   });
 }
-
-// function sayHello() {
-//     //do something
-// }
-//sayHello();    //invoke function

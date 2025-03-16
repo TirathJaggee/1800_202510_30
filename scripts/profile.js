@@ -1,4 +1,4 @@
-var currentUser;          //put this right after you start script tag before writing any functions.
+var currentUser;      //put this right after you start script tag before writing any functions.
 
 function populateUserInfo() {
     firebase.auth().onAuthStateChanged(user => {
@@ -7,6 +7,7 @@ function populateUserInfo() {
 
         //go to the correct user document by referencing to the user uid
         currentUser = db.collection("users").doc(user.uid)
+        localStorage.setItem("currentUserLS", currentUser);
         //get the document for current user.
         currentUser.get()
             .then(userDoc => {

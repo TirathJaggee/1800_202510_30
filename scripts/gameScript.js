@@ -65,9 +65,48 @@ function handleAnswer(selectedValue, correctAnswer) {
         console.log("User Score: ", userScore);
     } else {
         localStorage.setItem("userScoreLS", userScore);
-        userScore = 0;
-        rounds = 0;
-        window.location.href = '/results';
+        
+        // Check if user is logged in
+        firebase.auth().onAuthStateChanged(user => {
+            if (user) {
+                const currentUser = db.collection("users").doc(user.uid);
+                
+                currentUser.get()
+                    .then(userDoc => {
+                        if (userDoc.exists) {
+                            // Get the data fields of the user
+                            let thisScore = userDoc.data().score;
+                            let num_correct = userDoc.data().num_correct;
+                            let num_wrong = userDoc.data().num_wrong;
+                            
+                            // Update user stats
+                            return currentUser.update({
+                                score: Number(thisScore) + Number(localStorage.getItem("userScoreLS")),
+                                num_correct: Number(num_correct) + Number(localStorage.getItem("userScoreLS")),
+                                num_wrong: Number(num_wrong) + (5 - Number(localStorage.getItem("userScoreLS"))),
+                            });
+                        } else {
+                            console.log("No such user document!");
+                        }
+                    })
+                    .then(() => {
+                        console.log("User Score updated: ", userScore);
+                        // Reset game state
+                        userScore = 0;
+                        rounds = 0;
+                        window.location.href = '/results';
+                    })
+                    .catch(error => {
+                        console.error("Error updating user document: ", error);
+                    });
+            } else {
+                console.log("User is not logged in");
+                // Reset game state even if user is not logged in
+                userScore = 0;
+                rounds = 0;
+                window.location.href = '/results';
+            }
+        });
     }
 }
 
