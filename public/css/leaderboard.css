@@ -134,3 +134,8 @@ body {
     font-size: 20px;
     color: white;
 }
+
+#footerIcons {
+    text-decoration: none;
+    color: rgb(2, 78, 55);
+}

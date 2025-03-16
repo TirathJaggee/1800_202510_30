@@ -35,3 +35,7 @@
 body {
     background-color: #f2fbf2; /* Lightest shade for body background to follow the 60% rule */
 }
+#footerIcons {
+    text-decoration: none;
+    color: rgb(2, 78, 55);
+}

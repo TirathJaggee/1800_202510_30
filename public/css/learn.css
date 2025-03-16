@@ -83,3 +83,8 @@ body {
     text-align: left;
 }
 
+#footerIcons {
+    text-decoration: none;
+    color: rgb(2, 78, 55);
+}
+

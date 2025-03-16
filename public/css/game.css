@@ -1,19 +1,67 @@
 fieldset {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border: none;
+    background: transparent;
 }
 
-.first_image_button {
+#description {
+    font-size: 1.7rem;
+    text-align: center;
+    padding-bottom: 3vh;
+}
+
+#firstImageButton {
     width: 45vw;
+    padding-bottom: 5vh;
+    border: none;
+    background: transparent;
 }
 
-.first_image_button img {
+#firstImageButton img {
     width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    background: transparent;
 }
-.second_image_button {
+#secondImageButton {
     width: 45vw;
+    padding-bottom: 5vh;
+    border: none;
+    background: transparent;
 }
 
-.second_image_button img {
+#secondImageButton img {
     width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    background: transparent;
+}
+
+#firstImageDescription {
+    width: 45vw;
+    padding-bottom: 3vh;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#secondImageDescription {
+    width: 45vw;
+    padding-bottom: 3vh;
+    border: none;
+    background: transparent;
+    text-align: center;
+    font-size: 1.5rem;
+}
+#footerIcons {
+    text-decoration: none;
+    color: rgb(2, 78, 55);
 }

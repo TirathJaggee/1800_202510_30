@@ -28,17 +28,20 @@ async function display() {
 
 
     let question = snapshot.docs[i].data();
-    // console.log(question);
     let questionId = snapshot.docs[i].id;
     usedQuestions.push(questionId);
     let correctAnswer = question.answer;
     let description = question.description;
     let image1 = question.image1;
     let image2 = question.image2;
-
+    let firstImageDescription = question.image1_description;
+    let secondImageDescription = question.image2_description;
+    
     document.getElementById('description').textContent = description;
     document.getElementById('firstImage').src = image1;
     document.getElementById('secondImage').src = image2;
+    document.getElementById("firstImageDescription").textContent = firstImageDescription;
+    document.getElementById("secondImageDescription").textContent = secondImageDescription;
     document.getElementById("firstImageButton").value = 1;
     document.getElementById("secondImageButton").value = 2;
 
