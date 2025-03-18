@@ -13,7 +13,6 @@ function checkLogin(){
     // If the "user" variable is not null, then someone is logged in
         
         // User is signed in.
-        // Do something for the user here.
         console.log('User is currently logged in.');
     } else {
         // No user is signed in.

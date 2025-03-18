@@ -15,6 +15,7 @@ function populateUserInfo() {
                 let userName = userDoc.data().name;
                 let userEmail = userDoc.data().email;
                 let userScore = userDoc.data().score;
+                let userStreak = userDoc.data().streak;
                 let userNumCorrect = userDoc.data().num_correct;
                 let userNumWrong = userDoc.data().num_wrong;
                 let userGems = userDoc.data().gems;
@@ -28,6 +29,9 @@ function populateUserInfo() {
                 }
                 if (userScore != null) {
                     document.getElementById("userScore").value = userScore;
+                }
+                if (userStreak != null) {
+                    document.getElementById("userStreak").value = userStreak;
                 }
                 if (userNumCorrect != null) {
                     document.getElementById("userNumCorrect").value = userNumCorrect;
@@ -45,4 +49,21 @@ function populateUserInfo() {
             }
     });
 }
+function editUserInfo() {
+    //Enable the form fields
+    document.getElementById('personalInfoFields').disabled = false;
+}
 
+function saveUserInfo() {
+
+    userName = document.getElementById('nameInput').value;       //get the value of the field with id="nameInput"
+    
+    currentUser.update({
+        name: userName,
+    })
+    .then(() => {
+        console.log("Document successfully updated!");
+    })
+
+    document.getElementById('personalInfoFields').disabled = true;
+}
