@@ -46,23 +46,3 @@ function populateUserInfo() {
     });
 }
 
-function editUserInfo() {
-    //Enable the form fields
-    document.getElementById('personalInfoFields').disabled = false;
-}
-
-function saveUserInfo() {
-
-    userName = document.getElementById('nameInput').value;       //get the value of the field with id="nameInput"
-    
-    currentUser.update({
-        name: userName,
-    })
-    .then(() => {
-        console.log("Document successfully updated!");
-    })
-
-    document.getElementById('personalInfoFields').disabled = true;
-}
-
-populateUserInfo();

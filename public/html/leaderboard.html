@@ -85,8 +85,26 @@
       <span class="username">User</span>
       <div class="progress-bar"></div>
     </li>
+    <li class="leaderboard-item">
+      <span class="rank">Me</span>
+      <span class="material-icons user-icon">person</span>
+      <span class="username">User</span>
+      <div class="progress-bar"></div>
+    </li>
   </ul>
   </div>
+
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h3 class="display-4 fw-bold">Compare Your Stats With The Best!</h3>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  
 
   <div id="footerPlaceholder"> </div>
 
@@ -103,8 +121,10 @@
 <script src="/scripts/script.js"></script>
 <script src="/scripts/firebaseAPI_BBY30.js"></script>
 <script src="/scripts/skeleton.js"></script>
+<script src="/scripts/leaderboards.js"></script>
 <script>
   checkLogin();
+  leads();
 </script>
 </body>
 
