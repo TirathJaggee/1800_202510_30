@@ -82,12 +82,13 @@ body {
 .leaderboard-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 10px;
-    border: 2px solid #ccc; 
-    border-radius: 10px; 
-    background: white; 
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: white;
 }
 
 .rank {
@@ -121,15 +122,6 @@ body {
     font-weight: bold;
 }
 
-
-.progress-bar {
-    width: 100px;
-    height: 10px;
-    background: lightgray;
-    border-radius: 5px;
-}
-
-
 .icon {
     font-size: 20px;
     color: white;
@@ -139,3 +131,12 @@ body {
     text-decoration: none;
     color: rgb(2, 78, 55);
 }
+
+.stats-container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .rank, .user-icon, .username {
+    margin-right: 10px
+  }
