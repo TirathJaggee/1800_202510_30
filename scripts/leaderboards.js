@@ -1,41 +1,27 @@
-let users = []; 
+let users = []; // Array to store user data
 
 async function leads() {
-    let snapshot = await db.collection('users').get(); 
+    let snapshot = await db.collection('users').get(); // Fetch user data from Firebase
+    let uniqueUsers = new Map(); // Use a Map to prevent duplicate users
 
     snapshot.docs.forEach(doc => {
         let user = doc.data();
-        let userName = user.name || "Unknown"; 
-        let numCorrect = user.num_correct || 0; 
-        let numWrong = user.num_wrong || 0; 
+        let userName = user.name || "Unknown"; // Handle missing names
+        let numCorrect = user.num_correct || 0;
+        let numWrong = user.num_wrong || 0;
         let totalQuestions = numCorrect + numWrong;
-        let correctionPercentage = totalQuestions > 0 ? ((numCorrect / totalQuestions) * 100).toFixed(2) : "0";
+        let correctionPercentage = totalQuestions ? ((numCorrect / totalQuestions) * 100).toFixed(2) : "0";
 
-        users.push({
-            name: userName,
-            correct: numCorrect,
-            wrong: numWrong,
-            correctionPercentage: correctionPercentage
-        });
+        if (!uniqueUsers.has(userName)) {
+            uniqueUsers.set(userName, { name: userName, correct: numCorrect, wrong: numWrong, correctionPercentage });
+        }
     });
 
-    // Sort users by Questions Correct in descending order
-    users.sort((a, b) => b.correct - a.correct);
+    let topUsers = [...uniqueUsers.values()].sort((a, b) => b.correct - a.correct).slice(0, 5);
 
-    // Get the top 5 users
-    let topUsers = users.slice(0, 5);
-
-    
-    let leaderboardList = document.querySelector(".leaderboard");
-    leaderboardList.innerHTML = ""; 
-
-    // Loop through the top 5 users and add them to the leaderboard
-    topUsers.forEach((user, index) => {
-        let listItem = document.createElement("li");
-        listItem.classList.add("leaderboard-item");
-
-        listItem.innerHTML = `
-            <span class="rank">${index + 1}</span>
+    document.querySelector(".leaderboard").innerHTML = topUsers.map((user, i) => `
+        <li class="leaderboard-item">
+            <span class="rank">${i + 1}</span>
             <span class="material-icons user-icon">person</span>
             <span class="username">${user.name}</span>
             <div class="stats-container">
@@ -43,12 +29,10 @@ async function leads() {
                 <span>Questions Wrong: ${user.wrong}</span>
                 <span>Correction%: ${user.correctionPercentage}%</span>
             </div>
-        `;
+        </li>
+    `).join("");
 
-        leaderboardList.appendChild(listItem);
-    });
-
-    console.log("Top 5 Users:", topUsers); 
+    console.log("Top 5 Users:", topUsers);
 }
 
-leads(); 
+leads();
