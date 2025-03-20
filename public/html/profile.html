@@ -36,6 +36,7 @@
 
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/profile.css">
   <!-- Google Icons (Material Design)-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -57,30 +58,30 @@
                     <input type="text" id="nameInput" class="form-control" placeholder="Name">
                 </div>
             </fieldset>
-            <fieldset class="mb-3" disabled>
+            <fieldset id="statsFields" class="mb-3" disabled>
             <div class="form-group">
                 <label >Email</label>
-                <input type="text" id="emailInput" class="form-control" placeholder="Email">
+                <span id="emailInput" class="badge"></span>
             </div>
             <div class="form-group">
                 <label >Score</label>
-                <input type="text" id="userScore" class="form-control" placeholder="0">
+                <span id="userScore" class="badge badge-warning"></span>
             </div>
             <div class="form-group">
                 <label >Streak</label>
-                <input type="text" id="userStreak" class="form-control" placeholder="0">
+                <span id="userStreak" class="button badge-success"></span>
             </div>
             <div class="form-group">
                 <label >Number of Correct Answers</label>
-                <input type="text" id="userNumCorrect" class="form-control" placeholder="0">
+                <span id="userNumCorrect" class="badge badge-success"></span>
             </div>
             <div class="form-group">
                 <label >Number of Wrong Answers</label>
-                <input type="text" id="userNumWrong" class="form-control" placeholder="0">
+                <span id="userNumWrong" class="badge badge-danger"></span>
             </div>
             <div class="form-group">
                 <label >Gems</label>
-                <input type="text" id="userGems" class="form-control" placeholder="0">
+                <span id="userGems" class="badge badge-warning"></span>
             </div>
             </fieldset>
             <div class="d-flex justify-content-end mt-5">

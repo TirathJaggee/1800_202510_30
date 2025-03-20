@@ -25,22 +25,22 @@ function populateUserInfo() {
                     document.getElementById("nameInput").value = userName;
                 }
                 if (userEmail != null) {
-                    document.getElementById("emailInput").value = userEmail;
+                    document.getElementById("emailInput").innerHTML = userEmail;
                 }
                 if (userScore != null) {
-                    document.getElementById("userScore").value = userScore;
+                    document.getElementById("userScore").innerHTML = userScore;
                 }
                 if (userStreak != null) {
-                    document.getElementById("userStreak").value = userStreak;
+                    document.getElementById("userStreak").innerHTML = userStreak;
                 }
                 if (userNumCorrect != null) {
-                    document.getElementById("userNumCorrect").value = userNumCorrect;
+                    document.getElementById("userNumCorrect").innerHTML = userNumCorrect;
                 }
                 if (userNumWrong != null) {
-                    document.getElementById("userNumWrong").value = userNumWrong;
+                    document.getElementById("userNumWrong").innerHTML = userNumWrong;
                 }
                 if (userGems != null) {
-                    document.getElementById("userGems").value = userGems;
+                    document.getElementById("userGems").innerHTML = userGems;
                 }
             })
             } else {

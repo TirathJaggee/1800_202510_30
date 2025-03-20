@@ -1,0 +1,19 @@
+.statsFields .badge {
+    color:black;
+}
+
+.statsFields .badge-success {
+    color: green;
+}
+
+.statsFields .badge-danger {
+    color: red;
+}
+
+.statsFields .badge-info {
+    color: blue;
+}
+
+.statsFields .badge-warning {
+    color: yellow;
+}
