@@ -1,12 +1,12 @@
-let users = []; // Array to store user data
+let users = []; 
 
 async function leads() {
-    let snapshot = await db.collection('users').get(); // Fetch user data from Firebase
-    let uniqueUsers = new Map(); // Use a Map to prevent duplicate users
+    let snapshot = await db.collection('users').get(); 
+    let uniqueUsers = new Map(); // to prevent duplicate users
 
     snapshot.docs.forEach(doc => {
         let user = doc.data();
-        let userName = user.name || "Unknown"; // Handle missing names
+        let userName = user.name || "Unknown"; 
         let numCorrect = user.num_correct || 0;
         let numWrong = user.num_wrong || 0;
         let totalQuestions = numCorrect + numWrong;
@@ -18,19 +18,22 @@ async function leads() {
     });
 
     let topUsers = [...uniqueUsers.values()].sort((a, b) => b.correct - a.correct).slice(0, 5);
+    
+    // Select all existing leaderboard items
+    let leaderboardItems = document.querySelectorAll(".leaderboard-item");
 
-    document.querySelector(".leaderboard").innerHTML = topUsers.map((user, i) => `
-        <li class="leaderboard-item">
-            <span class="rank">${i + 1}</span>
-            <span class="material-icons user-icon">person</span>
-            <span class="username">${user.name}</span>
-            <div class="stats-container">
-                <span>Questions Correct: ${user.correct}</span>
-                <span>Questions Wrong: ${user.wrong}</span>
-                <span>Correction%: ${user.correctionPercentage}%</span>
-            </div>
-        </li>
-    `).join("");
+    leaderboardItems.forEach((item, i) => {
+        if (topUsers[i]) {
+            item.querySelector(".rank").textContent = i + 1;
+            item.querySelector(".username").textContent = topUsers[i].name;
+            let stats = item.querySelector(".stats-container").children;
+            stats[0].textContent = `Questions Correct: ${topUsers[i].correct}`;
+            stats[1].textContent = `Questions Wrong: ${topUsers[i].wrong}`;
+            stats[2].textContent = `Correction%: ${topUsers[i].correctionPercentage}%`;
+        } else {
+            item.style.display = "none"; // Hide extra items if fewer than 5 users
+        }
+    });
 
     console.log("Top 5 Users:", topUsers);
 }
