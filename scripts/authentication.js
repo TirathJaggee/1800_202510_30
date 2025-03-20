@@ -26,6 +26,7 @@ var uiConfig = {
                    num_correct: 0,
                    num_wrong: 0,
                    streak: 0,
+                   inventory: [ 'cNVowJCaOA5iUMaJecl2' ],
                    gems: 0                 //with authenticated user's ID (user.uid)
             }).then(function () {
                    console.log("New user added to firestore");

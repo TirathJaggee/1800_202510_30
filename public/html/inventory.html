@@ -18,9 +18,9 @@
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <!-- Other libraries go here -->
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
 
   <!-------------------------------------------------------->
   <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
@@ -32,69 +32,42 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-  
 
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/profile.css">
   <!-- Google Icons (Material Design)-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 
 </head>
 
 <body>
-
   <div id="navbarPlaceholder"></div>
 
-  <div class="px-4 pt-5 my-5 border-bottom text-center">
-    <h1 class="display-4 fw-bold">Profile: </h1>
-    <div class="container">
-        <h1>User Profile </h1>
-        <form>
-            <fieldset class="mb-3" id="personalInfoFields" disabled>
-                <div class="form-group">
-                    <label >Name</label>
-                    <input type="text" id="nameInput" class="form-control" placeholder="Name">
-                </div>
-            </fieldset>
-              <div id="statsFields" class="mb-3">
-              <div class="form-group">
-                  <label >Email</label>
-                  <p id="emailInput" class="h5"></p>
-              </div>
-              <div class="form-group">
-                  <label >Score</label>
-                  <p id="userScore" class="h5"></p>
-              </div>
-              <div class="form-group">
-                  <label >Streak</label>
-                  <p id="userStreak" class="h5"></p>
-              </div>
-              <div class="form-group">
-                  <label >Number of Correct Answers</label>
-                  <p id="userNumCorrect" class="h5"></p>
-              </div>
-              <div class="form-group">
-                  <label >Number of Wrong Answers</label>
-                  <p id="userNumWrong" class="h5"></p>
-              </div>
-              <div class="form-group">
-                  <label >Gems</label>
-                  <p id="userGems" class="h5"></p>
-              </div>
-              <div class="form-group">
-                <label><a href="/inventory">Inventory</a></label>
-                <p id="userInventory" class="h5"></p>
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold">Inventory</h1>
+    <h2>Check all the items you have collected</h2>
+    <div class="d-flex justify-content-center" id="userGems"></div>
+    <div class="col-lg-6 mx-auto">
+      <div id="inventory">
+      </div>
+      <template id="itemTemplate">
+        <div class="card py-2 mx-2" style="width: 18rem">
+            <img class="card-image card-img-top" src=" ..." alt="..." />
+            <div class="card-body">
+                <h5 class="card-name"></h5>
+                <p class="card-price"></p>
+                <br />
+                <p class="card-description"></p>
+                <a class="btn btn-primary card-href">EQUIP</a>
+
             </div>
-            </div>
-            <div class="d-flex justify-content-end mt-5">
-                <button type="button" onclick="editUserInfo()" class="btn btn-secondary">Edit</button>
-                <span style="width: 10px"></span>
-                <button type="button" onclick="saveUserInfo()" class="btn btn-info">Save</button>
-            </div>
-        </form>
-</div>
+        </div>
+     </template>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+    </div>
   </div>
 
   <div id="footerPlaceholder">
@@ -104,10 +77,9 @@
   <script src="/scripts/script.js"></script>
   <script src="/scripts/firebaseAPI_BBY30.js"></script>
   <script src="/scripts/skeleton.js"></script>
-  <script src="/scripts/profile.js"></script>
+  <script src="/scripts/inventory.js"></script>
   <script>
     checkLogin();
-    populateUserInfo();
   </script>
 </body>
 
