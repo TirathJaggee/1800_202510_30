@@ -1,0 +1,12 @@
+#profileButton {
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+#profileIcon {
+    color: white;
+    background: transparent;
+    vertical-align: middle;
+    
+}
