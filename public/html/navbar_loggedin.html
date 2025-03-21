@@ -1,14 +1,16 @@
 <link rel="stylesheet" href="/css/navbar.css">
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-        <a href="/main">
-            <span class="material-icons">arrow_back</span>
+<nav class="navbar navbar-expand-lg mx-auto navbar-light bg-light" id="navbar">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="container-fluid align-items-center">
+        <a href="/main" class="collapse navbar-collapse" id="returnButtonLink">
+            <span class="material-icons" id="returnButton">arrow_back</span>
         </a>
-        <span class="navbar-brand text-center">TheSmartChoice</span>
-        <form class="form-inline">
-          <a class="btn btn-success" id="profileButton" href="/profile" role="button"><span id="profileIcon" class="material-icons">account_circle</span></a>
-          <span><a class="btn btn-danger" href="/" role="button">Logout</a></span>
-        </form>
-
+        <span class="navbar-brand text-center" id="navbarBrand" >TheSmartChoice</span>
+    </div>
+    <div class="collapse navbar-collapse align-items-end justify-content-end" id="navbarButtons">
+        <a class="btn btn-success" id="profileButton" href="/profile" role="button"><span id="profileIcon" class="material-icons">account_circle</span></a>
+        <span><a href="/" id="logoutButton" role="button">Logout</a></span>
     </div>
 </nav>

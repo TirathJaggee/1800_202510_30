@@ -15,10 +15,6 @@
     background-color: #72b372 !important; /* Light green for secondary backgrounds */
 }
 
-.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
-    color: #005a00;            /* Dark green for brand name & nav links for visibility */
-}
-
 .btn-info {
     color: #f2fbf2;            /* Lightest shade for text on info button for contrast */
     background-color: #72b372; /* Light green for button background */
@@ -34,8 +30,17 @@
 
 body {
     background-color: #f2fbf2; /* Lightest shade for body background to follow the 60% rule */
+    height: 100vh;
 }
 #footerIcons {
     text-decoration: none;
     color: rgb(2, 78, 55);
 }
+#footerLoggedInDiv {
+    width: 90%;
+    max-width: 600px;
+    justify-content: center;
+    gap: 13vw; 
+}
+    
+    
