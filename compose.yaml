@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: smartchoice-app
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=production
+    command: ["npm", "start"]
