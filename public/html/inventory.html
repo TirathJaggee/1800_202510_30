@@ -35,6 +35,7 @@
 
   <!-- Link to styles of your own -->
   <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/inventory.css">
   <!-- Google Icons (Material Design)-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -43,15 +44,30 @@
 </head>
 
 <body>
- 
   <div id="navbarPlaceholder"></div>
 
   <div class="px-4 pt-5 my-5 text-center border-bottom">
-    <h1 class="display-4 fw-bold">All you need for your profile!</h1>
-    <h2>The hottest deals are waiting for you!</h2>
+    <h1 class="display-4 fw-bold">Inventory</h1>
+    <h2>Check all the items you have collected</h2>
+    <h3>Total Gem$</h3>
+    <h3 id="userGems"></h3>
+    <br />
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4">// TO DO (list the deals and store items)
-      </p>
+      <div id="inventory">
+      </div>
+      <template id="itemTemplate">
+        <div class="card py-2 mx-2" style="width: 18rem">
+            <img class="card-image card-img-top" src=" ..." alt="..." />
+            <div class="card-body">
+                <h5 class="card-name"></h5>
+                <p class="card-price"></p>
+                <br />
+                <p class="card-description"></p>
+                <a class="btn btn-primary card-href">EQUIP</a>
+
+            </div>
+        </div>
+     </template>
     </div>
     <div class="overflow-hidden" style="max-height: 30vh;">
     </div>
@@ -64,6 +80,7 @@
   <script src="/scripts/script.js"></script>
   <script src="/scripts/firebaseAPI_BBY30.js"></script>
   <script src="/scripts/skeleton.js"></script>
+  <script src="/scripts/inventory.js"></script>
   <script>
     checkLogin();
   </script>

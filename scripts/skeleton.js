@@ -50,12 +50,21 @@ function loadSkeleton() {
             });
 
             // User is signed in.
-            console.log($('#navbarPlaceholder').load('/html/navbar_loggedin.html'));
-            console.log($('#footerPlaceholder').load('/html/footer_loggedin.html'));
+            currentUser.get()
+            .then(userDoc => {
+                let gems = "Gem$: " + userDoc.data().gems;
+                $('#gemsDisplay').text(gems);
+            })
+            .catch(error => {
+                console.error("Error getting user document:", error);
+            });
+
+            $('#navbarPlaceholder').load('/html/navbar_loggedin.html');
+            $('#footerPlaceholder').load('/html/footer_loggedin.html');
         } else {
             // No user is signed in.
-            console.log($('#navbarPlaceholder').load('/html/navbar_loggedout.html'));
-            console.log($('#footerPlaceholder').load('/html/footer_loggedout.html'));
+            $('#navbarPlaceholder').load('/html/navbar_loggedout.html');
+            $('#footerPlaceholder').load('/html/footer_loggedout.html');
         }
     });
 }

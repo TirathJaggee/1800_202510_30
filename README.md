@@ -27,10 +27,39 @@ Developed for the **BCIT CST 1800-Projects** course, this application applies **
 5. Track your progress on the leaderboard and learn more about nutrition through the educational resources.
 
 ## Deployment
-1. Install Node.js
-2. Install ``` npm install express ```
-3. Install ``` npm install cors ```
-3. Run ```npm server.js```
+
+### Option 1: Using Node.js
+1. Clone the repository
+   ```bash
+   git clone <repository-url>
+   cd smartchoice
+   ```
+2. Install dependencies
+   ```bash
+   npm install
+   ```
+3. Start the application
+   ```bash
+   node server.js
+   ```
+4. Open your browser and navigate to `http://localhost:3000`
+
+### Option 2: Using Docker
+1. Make sure you have Docker installed on your system
+2. Clone the repository
+   ```bash
+   git clone <repository-url>
+   cd smartchoice
+   ```
+3. Build the Docker image
+   ```bash
+   docker build -t smartchoice .
+   ```
+4. Run the Docker container
+   ```bash
+   docker run -p 8000:8000 smartchoice
+   ```
+5. Open your browser and navigate to `http://localhost:8000`
 
 ## Project Structure
 ```
@@ -93,4 +122,3 @@ smartchoice/
 
 ## License
 This project is created for educational purposes as part of the **BCIT CST program**.
-

@@ -4,9 +4,32 @@ let availableQuestions = [];
 let usedQuestions = [];
 let rounds = 0;
 let i = 0;
+let clicked = false;
+let correctImage = "/images/correct.png";
+let wrongImage = "/images/wrong.png";
+let progressBar = document.getElementById("progressBar");
+let numOfQuestions = document.getElementById("numOfQuestions");
+
 
 async function display() {
     const snapshot = await db.collection('questions').get();
+    if(rounds == 0) {
+        progressBar.style.width = "0%";
+        numOfQuestions.textContent = "1/5";
+    } else if(rounds == 1) {
+        progressBar.style.width = "20%";
+        numOfQuestions.textContent = "2/5";
+    } else if(rounds == 2) {
+        progressBar.style.width = "40%";
+        numOfQuestions.textContent = "3/5";
+    } else if(rounds == 3) {
+        progressBar.style.width = "60%";
+        numOfQuestions.textContent = "4/5";
+    } else if(rounds == 4) {
+        progressBar.style.width = "80%";
+        numOfQuestions.textContent = "5/5";
+    }
+
 
     // console.log(snapshot.docs.map(doc => doc.data()));
     i = Math.floor(Math.random() * snapshot.docs.length);
@@ -18,6 +41,9 @@ async function display() {
     // Remove existing event listeners before adding new ones
     const firstButton = document.getElementById("firstImageButton");
     const secondButton = document.getElementById("secondImageButton");
+    firstButton.removeEventListener("click", handleAnswer);
+    secondButton.removeEventListener("click", handleAnswer);
+
     
     // Clone and replace buttons to remove all event listeners
     const firstButtonClone = firstButton.cloneNode(true);
@@ -46,16 +72,31 @@ async function display() {
     document.getElementById("secondImageButton").value = 2;
 
     document.getElementById("firstImageButton").addEventListener("click", () => {
-        handleAnswer(1, correctAnswer);
+        if (!clicked) {
+            clicked = true;
+            document.getElementById('firstImage').src = correctAnswer == 1 ? correctImage : wrongImage;
+            document.getElementById("firstImageButton").classList.add("animateCorrect"); // Add animation class
+            setTimeout(() => document.getElementById("firstImageButton").classList.remove("animateCorrect"), 800); // Remove after animation
+            handleAnswer(1, correctAnswer);
+        }
     });
     document.getElementById("secondImageButton").addEventListener("click", () => {
-        handleAnswer(2, correctAnswer);
+        if (!clicked) {
+            clicked = true;
+            document.getElementById('secondImage').src = correctAnswer == 2 ? correctImage : wrongImage;
+            document.getElementById("secondImageButton").classList.add("animateWrong"); // Add animation class
+            setTimeout(() => document.getElementById("secondImageButton").classList.remove("animateWrong"), 800); // Remove after animation
+            handleAnswer(2, correctAnswer);
+        }
     });
 }
 
 function handleAnswer(selectedValue, correctAnswer) {
     if(selectedValue == correctAnswer) {
         userScore++;
+        clicked = false;
+    } else {
+        clicked = false;
     }
     
     rounds++;
