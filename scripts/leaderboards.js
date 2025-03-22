@@ -2,7 +2,7 @@ let users = [];
 
 async function leads() {
     let snapshot = await db.collection('users').get(); 
-    let uniqueUsers = new Map(); // to prevent duplicate users
+    let uniqueUsers = new Map(); // Use a Map to prevent duplicate users
 
     snapshot.docs.forEach(doc => {
         let user = doc.data();
@@ -19,7 +19,6 @@ async function leads() {
 
     let topUsers = [...uniqueUsers.values()].sort((a, b) => b.correct - a.correct).slice(0, 5);
     
-    // Select all existing leaderboard items
     let leaderboardItems = document.querySelectorAll(".leaderboard-item");
 
     leaderboardItems.forEach((item, i) => {
