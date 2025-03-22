@@ -14,7 +14,9 @@ fieldset {
 }
 
 #firstImageButton {
-    width: 45vw;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     padding-bottom: 5vh;
     border: none;
     background: transparent;
@@ -29,7 +31,9 @@ fieldset {
     background: transparent;
 }
 #secondImageButton {
-    width: 45vw;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     padding-bottom: 5vh;
     border: none;
     background: transparent;
@@ -45,7 +49,9 @@ fieldset {
 }
 
 #firstImageDescription {
-    width: 45vw;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     padding-bottom: 3vh;
     border: none;
     background: transparent;
@@ -54,7 +60,9 @@ fieldset {
 }
 
 #secondImageDescription {
-    width: 45vw;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     padding-bottom: 3vh;
     border: none;
     background: transparent;
@@ -88,4 +96,9 @@ fieldset {
     0% { transform: scale(1); }
     50% { transform: scale(1.2); }
     100% { transform: scale(1); }
+}
+
+#gameContainer {
+    width: 100%;
+    overflow-x: hidden;
 }

@@ -1,8 +1,102 @@
-
+body {
+    max-width: 100%;
+    max-height: 100vh;
+    overflow-x: hidden;
+}
 #nameInput {
     background-color: transparent;
     border: none;
     color: black;
     width: 100%;
     text-align: center;
+}
+#container {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 60vh;
+}
+#inventoryButton a {
+    text-decoration: none;
+    color: black;
+}
+#myChart {
+    max-width: 60%;
+    height: auto;
+}
+#statsFieldsHeader {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#statsFields {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#personalInfoFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#gemsFields {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    #statsFields {
+        flex-direction: row;
+    }
+    
+    #gemsFields {
+        flex-direction: row;
+    }
+}
+
+/* Fix for form groups on small screens */
+.form-group {
+    width: 100%;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+/* Make sure all content is responsive */
+h3, p, label {
+    max-width: 100%;
+    word-wrap: break-word;
 }

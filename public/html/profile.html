@@ -32,6 +32,7 @@
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   
 
   <!-- Link to styles of your own -->
@@ -50,40 +51,45 @@
   <div class="px-4 pt-5 my-5 border-bottom text-center">
     <h1 class="display-4 fw-bold">Profile: </h1>
     <div class="container">
-        <h1>User Profile </h1>
         <form>
             <fieldset class="mb-3" id="personalInfoFields" disabled>
                 <div class="form-group">
-                    <label >Name</label>
+                    <label ><h3>Name</h3></label>
                     <input type="text" id="nameInput" class="form-control" placeholder="Name">
                 </div>
+                <div class="form-group">
+                    <label ><h3>Email</h3></label>
+                    <p id="emailInput" class="h5"></p>
+                </div>
             </fieldset>
-              <div id="statsFields" class="mb-3">
-              <div class="form-group">
-                  <label >Email</label>
-                  <p id="emailInput" class="h5"></p>
+            <div id="statsFieldsHeader" class="mb-3">
+                <h3>Statistics: </h3>
+                <canvas id="myChart"></canvas>
+            </div>
+            <div id="statsFields" class="mb-3">
+                <div class="form-group">
+                    <h4>Score</h4>
+                    <p id="userScore" class="h5"></p>
+                </div>
+                <div class="form-group">
+                    <h4>Streak</h4>
+                    <p id="userStreak" class="h5"></p>
+                </div>
+                <div class="form-group">
+                    <h4>Correct Answers</h4>
+                    <p id="userNumCorrect" class="h5"></p>
+                </div>
+                <div class="form-group">
+                    <h4>Wrong Answers</h4>
+                    <p id="userNumWrong" class="h5"></p>
+                </div>
               </div>
-              <div class="form-group">
-                  <label >Score</label>
-                  <p id="userScore" class="h5"></p>
-              </div>
-              <div class="form-group">
-                  <label >Streak</label>
-                  <p id="userStreak" class="h5"></p>
-              </div>
-              <div class="form-group">
-                  <label >Number of Correct Answers</label>
-                  <p id="userNumCorrect" class="h5"></p>
-              </div>
-              <div class="form-group">
-                  <label >Number of Wrong Answers</label>
-                  <p id="userNumWrong" class="h5"></p>
-              </div>
-              <div class="form-group">
-                  <label >Gems</label>
-                  <p id="userGems" class="h5"></p>
-              </div>
-              <div class="form-group">
+              <div class="mb-3" id="gemsFields">
+                <h3>Total Gem$</h3>
+                <div class="form-group">
+                    <p id="userGems" class="h5"></p>
+                </div>
+              <div class="btn btn-warning form-group" id="inventoryButton">
                 <label><a href="/inventory">Inventory</a></label>
                 <p id="userInventory" class="h5"></p>
             </div>

@@ -33,7 +33,7 @@ function populateInventory() {
                     })
                 }
                 if (userGems != null) {
-                    document.getElementById("userGems").innerHTML = "Total Gem$: " + userGems;
+                    document.getElementById("userGems").innerHTML = userGems;
                 }
             })
             } else {

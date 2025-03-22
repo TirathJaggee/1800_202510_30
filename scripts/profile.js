@@ -42,6 +42,7 @@ function populateUserInfo() {
                 if (userGems != null) {
                     document.getElementById("userGems").innerHTML = userGems;
                 }
+                graphStats(userNumCorrect, userNumWrong);
             })
             } else {
                 // No user is signed in.
@@ -66,4 +67,22 @@ function saveUserInfo() {
     })
 
     document.getElementById('personalInfoFields').disabled = true;
+}
+
+function graphStats(numCorrect, numWrong) {
+    const xValues = ["Correct", "Wrong"];
+    const yValues = [numCorrect, numWrong];
+    const barColors = ["green", "red"];
+    
+    new Chart("myChart", {
+      type: "doughnut",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {}
+    });   
 }
