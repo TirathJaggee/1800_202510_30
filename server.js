@@ -84,6 +84,11 @@ app.get("/login", (req, res) => {
     res.send(doc);
 });
 
+app.get("/logout", (req, res) => {
+    let doc = fs.readFileSync("./public/html/index.html", "utf8");
+    res.send(doc);
+});
+
 app.get("/store", (req, res) => {
     let doc = fs.readFileSync("./public/html/store.html", "utf8");
     res.send(doc);
