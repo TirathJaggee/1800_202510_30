@@ -118,7 +118,6 @@ smartchoice/
 - Develop a personalized learning path based on user performance
 - Implement social features to allow users to challenge friends
 - Create a mobile app version for improved accessibility
-- Dockerize the application
 
 ## License
 This project is created for educational purposes as part of the **BCIT CST program**.
