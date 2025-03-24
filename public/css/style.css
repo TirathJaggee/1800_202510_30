@@ -43,6 +43,12 @@ body {
     justify-content: center;
     gap: 8vw; 
 }
-
+#footerLoggedOutDiv {
+    width: 90%;
+    height: 4vh;
+    max-height: 100px;
+    justify-content: center;
+    gap: 8vw; 
+}
     
     
