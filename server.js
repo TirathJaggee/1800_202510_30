@@ -64,7 +64,7 @@ app.get("/learn/protein", (req, res) => {
     res.send(doc);
 });
 
-app.get("learn/vitamins", (req, res) => {
+app.get("/learn/vitamins", (req, res) => {
     let doc = fs.readFileSync("./public/html/vitamins.html", "utf8");
     res.send(doc);
 });
