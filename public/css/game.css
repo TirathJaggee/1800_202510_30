@@ -1,10 +1,10 @@
 fieldset {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-direction: row;
     border: none;
     background: transparent;
+    gap: 1vw;
 }
 
 #description {
@@ -101,4 +101,20 @@ fieldset {
 #gameContainer {
     width: 100%;
     overflow-x: hidden;
+}
+
+#sloganContainer {
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 1vh;
+    padding: 3%;
+}
+
+@media (max-width: 991px) {
+#sloganContainer {
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 2vh;
+    padding: 3%;
+}
 }

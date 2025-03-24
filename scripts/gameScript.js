@@ -74,29 +74,43 @@ async function display() {
     document.getElementById("firstImageButton").addEventListener("click", () => {
         if (!clicked) {
             clicked = true;
+            document.getElementById("firstImageButton").disabled = true;
+            document.getElementById("secondImageButton").disabled = true;
+    
             document.getElementById('firstImage').src = correctAnswer == 1 ? correctImage : wrongImage;
-            document.getElementById("firstImageButton").classList.add("animateCorrect"); // Add animation class
-            setTimeout(() => document.getElementById("firstImageButton").classList.remove("animateCorrect"), 800); // Remove after animation
+            document.getElementById("firstImageButton").classList.add("animateCorrect");
+            setTimeout(() => document.getElementById("firstImageButton").classList.remove("animateCorrect"), 800);
+    
             handleAnswer(1, correctAnswer);
         }
     });
+    
     document.getElementById("secondImageButton").addEventListener("click", () => {
         if (!clicked) {
             clicked = true;
+            document.getElementById("firstImageButton").disabled = true;
+            document.getElementById("secondImageButton").disabled = true;
+    
             document.getElementById('secondImage').src = correctAnswer == 2 ? correctImage : wrongImage;
-            document.getElementById("secondImageButton").classList.add("animateWrong"); // Add animation class
-            setTimeout(() => document.getElementById("secondImageButton").classList.remove("animateWrong"), 800); // Remove after animation
+            document.getElementById("secondImageButton").classList.add("animateWrong");
+            setTimeout(() => document.getElementById("secondImageButton").classList.remove("animateWrong"), 800);
+    
             handleAnswer(2, correctAnswer);
         }
     });
+    
 }
 
 function handleAnswer(selectedValue, correctAnswer) {
     if(selectedValue == correctAnswer) {
         userScore++;
         clicked = false;
+        document.getElementById("firstImageButton").disabled = false;
+        document.getElementById("secondImageButton").disabled = false;
     } else {
         clicked = false;
+        document.getElementById("firstImageButton").disabled = false;
+        document.getElementById("secondImageButton").disabled = false;
     }
     
     rounds++;
@@ -119,13 +133,28 @@ function handleAnswer(selectedValue, correctAnswer) {
                             let thisScore = userDoc.data().score;
                             let num_correct = userDoc.data().num_correct;
                             let num_wrong = userDoc.data().num_wrong;
+                            let streak = userDoc.data().streak;
                             
                             // Update user stats
-                            return currentUser.update({
-                                score: Number(thisScore) + Number(localStorage.getItem("userScoreLS")),
-                                num_correct: Number(num_correct) + Number(localStorage.getItem("userScoreLS")),
-                                num_wrong: Number(num_wrong) + (5 - Number(localStorage.getItem("userScoreLS"))),
-                            });
+                            if(streak >= 5 && streak < 10) {
+                                return currentUser.update({
+                                    score: Number(thisScore) + (Number(localStorage.getItem("userScoreLS")) * 1.5),
+                                    num_correct: Number(num_correct) + Number(localStorage.getItem("userScoreLS")),
+                                    num_wrong: Number(num_wrong) + (5 - Number(localStorage.getItem("userScoreLS"))),
+                                });
+                            } else if(streak >= 10) {
+                                return currentUser.update({
+                                    score: Number(thisScore) + (Number(localStorage.getItem("userScoreLS")) * 2),
+                                    num_correct: Number(num_correct) + Number(localStorage.getItem("userScoreLS")),
+                                    num_wrong: Number(num_wrong) + (5 - Number(localStorage.getItem("userScoreLS"))),
+                                });
+                            } else {
+                                return currentUser.update({
+                                    score: Number(thisScore) + Number(localStorage.getItem("userScoreLS")),
+                                    num_correct: Number(num_correct) + Number(localStorage.getItem("userScoreLS")),
+                                    num_wrong: Number(num_wrong) + (5 - Number(localStorage.getItem("userScoreLS"))),
+                                });
+                            }
                         } else {
                             console.log("No such user document!");
                         }

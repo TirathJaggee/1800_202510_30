@@ -32,8 +32,11 @@
     display: block;
     position: absolute;
     height: 10%;
-    font-size: 2.5rem;
+    font-size: 3.5em;
     top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 #navbarButtons {
     justify-content: right;
@@ -64,4 +67,13 @@
 }
 .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
     color: #005a00;            /* Dark green for brand name & nav links for visibility */
+}
+
+@media (max-width: 991px) {
+    #navbarBrand {
+        font-size: 5vw;
+        min-width: 100%;
+        margin: auto;
+        top: 5%;
+    }
 }
