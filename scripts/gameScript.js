@@ -15,19 +15,19 @@ async function display() {
     const snapshot = await db.collection('questions').get();
     if(rounds == 0) {
         progressBar.style.width = "0%";
-        numOfQuestions.textContent = "1/5";
+        numOfQuestions.textContent = "Question 1 of 5";
     } else if(rounds == 1) {
         progressBar.style.width = "20%";
-        numOfQuestions.textContent = "2/5";
+        numOfQuestions.textContent = "Question 2 of 5";
     } else if(rounds == 2) {
         progressBar.style.width = "40%";
-        numOfQuestions.textContent = "3/5";
+        numOfQuestions.textContent = "Question 3 of 5";
     } else if(rounds == 3) {
         progressBar.style.width = "60%";
-        numOfQuestions.textContent = "4/5";
+        numOfQuestions.textContent = "Question 4 of 5";
     } else if(rounds == 4) {
         progressBar.style.width = "80%";
-        numOfQuestions.textContent = "5/5";
+        numOfQuestions.textContent = "Question 5 of 5";
     }
 
 
