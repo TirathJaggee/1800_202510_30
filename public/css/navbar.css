@@ -93,6 +93,11 @@
     background: transparent;
     font-size: 1.5rem;
 }
+#profileText {
+    color: white;
+    background: transparent;
+    font-size: 1.5rem;
+}
 
 @media (max-width: 991px) {
     #navbarBrand {
