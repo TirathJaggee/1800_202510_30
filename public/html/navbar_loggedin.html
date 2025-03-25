@@ -12,9 +12,13 @@
         <div class="collapse navbar-collapse align-items-end justify-content-end" id="navbarButtons">
             <div class="user-profile-section">
                 <div id="gemsDisplay"></div>
+                <div id="streakDisplay"></div>
                 <div class="dropdown">
-                    <button type="button" class="btn btn-success dropdown-toggle rounded-circle" data-toggle="dropdown" aria-expanded="false">
-                        <span id="profileIcon" class="material-icons">account_circle</span>
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span id="profileIcon" class="material-icons">account_circle</span> Settings
+                    </button>
+                    <button type="button" class="btn btn-success btn-lg" data-toggle="dropdown" aria-expanded="false">
+                        <a href="/play" id="playAgainLink"><span id="playAgainIcon">Play Now!</span></a>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right" id="dropdownMenuOpen">
                         <a class="dropdown-item" href="/profile">Profile</a>

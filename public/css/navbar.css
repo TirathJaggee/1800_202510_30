@@ -59,6 +59,20 @@
     color: #005a00;
     background-color: #f8f9fa;
 }
+#streakDisplay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #005a00;
+    background-color: #f8f9fa;
+}
 .user-profile-section {
     display: flex;
     flex-direction: row;
@@ -67,6 +81,17 @@
 }
 .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
     color: #005a00;            /* Dark green for brand name & nav links for visibility */
+}
+#playAgainIcon {
+    color: white;
+    background: transparent;
+    font-size: 1.5rem;
+}
+#playAgainLink {
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 991px) {

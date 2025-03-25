@@ -54,6 +54,8 @@ function loadSkeleton() {
             .then(userDoc => {
                 let gems = "Gem$: " + userDoc.data().gems;
                 $('#gemsDisplay').text(gems);
+                let streak = "Streak: &#128293; " + userDoc.data().streak;
+                $('#streakDisplay').html(streak);
             })
             .catch(error => {
                 console.error("Error getting user document:", error);
