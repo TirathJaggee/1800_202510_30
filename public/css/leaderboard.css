@@ -16,30 +16,21 @@
 }
 
 .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
-    color: #005a00;            /* Dark green for brand name & nav links for visibility */
+    color: #005a00;            /* Dark green for brand name & nav links */
 }
 
 .btn-info {
-    color: #f2fbf2;            /* Lightest shade for text on info button for contrast */
+    color: #f2fbf2;            /* Lightest shade for text */
     background-color: #72b372; /* Light green for button background */
     border-color: #005a00;     /* Dark green for button border */
 }
 
 .btn-primary {
-    color: #f2fbf2;            /* Lightest shade for text */
+    color: #f2fbf2;
     font-size: 150%;
-    background-color: #005a00; /* Dark green for primary button background */
+    background-color: #005a00;
     border: 0;
 }
-
-
-
-
-/* * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
 
 
 body {
@@ -47,9 +38,10 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f5fbe7;
-    
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -70,6 +62,7 @@ body {
 .leaderboard {
     list-style: none;
     padding: 0;
+    margin: 0 20px;
 }
 
 .leaderboard-item {
@@ -82,7 +75,9 @@ body {
     border: 2px solid #ccc;
     border-radius: 10px;
     background: white;
+   
 }
+
 
 .rank {
     width: 30px;
@@ -94,6 +89,7 @@ body {
     color: white;
     border-radius: 50%;
     font-weight: bold;
+    margin-right: 10px;
 }
 
 .user-icon {
@@ -108,11 +104,20 @@ body {
     width: 50px;
     height: 50px;
     background: #f0f0f0; 
+    margin-right: 10px;
 }
 
 .username {
     flex: 1;
     font-weight: bold;
+    margin-right: 10px;
+}
+
+.stats-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .icon {
@@ -125,11 +130,59 @@ body {
     color: rgb(2, 78, 55);
 }
 
-.stats-container {
-    display: flex;
-    gap: 20px;
-  }
 
-  .rank, .user-icon, .username {
-    margin-right: 10px
+@media (max-width: 991px) {
+    #navbarBrand {
+      font-size: 5vw;
+      text-align: center;
+      width: 100%;
+    }
+  
+    .leaderboard-item {
+      flex-wrap: wrap; 
+      align-items: flex-start;
+      padding: 10px 15px;
+      gap: 10px;
+    }
+  
+    .rank {
+      width: 28px;
+      height: 28px;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+  
+    .user-icon {
+      width: 42px;
+      height: 42px;
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+  
+    .username {
+      font-size: 4vw;
+      font-weight: bold;
+      max-width: 100%;
+      word-break: break-word;
+      flex-grow: 1;
+    }
+  
+    .stats-container {
+      display: flex;
+      flex-direction: column;
+      font-size: 3.5vw;
+      gap: 4px;
+      width: 100%;
+      margin-left: 5px;
+    }
+  
+    .display-4 {
+      font-size: 6vw;
+    }
+  
+    .leaderboard {
+      padding: 0 10px;
+    }
+  
   }
+  

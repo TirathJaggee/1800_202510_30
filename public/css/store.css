@@ -1,0 +1,46 @@
+.shop-card {
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background-color: #fff;
+  }
+  
+  .shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  
+  .shop-card img {
+    object-fit: cover;
+    height: 180px;
+    width: 100%;
+  }
+  
+  .shop-label {
+    color: #005a00;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .shop-cost {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: #333;
+  }
+  
+  .shop-buy-btn {
+    background-color: #005a00;
+    border: none;
+    border-radius: 20px;
+    padding: 6px 18px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .shop-buy-btn:hover {
+    background-color: #007e00;
+  }
+  
