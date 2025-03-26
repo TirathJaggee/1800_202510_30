@@ -53,21 +53,19 @@
     <h3 id="userGems"></h3>
     <br />
     <div class="col-lg-6 mx-auto">
-      <div id="inventory">
+      <div id="inventory" class="container">
+        <template id="itemTemplate">
+          <div class="card" id="itemCard">
+              <img class="card-image card-img-top" src=" ..." alt="..." />
+              <div class="card-body">
+                  <h5 class="card-name"></h5>
+                  <p class="card-price"></p>
+                  <p class="card-description"></p>
+                  <a class="btn card-href" id="equipButton">EQUIP</a>
+              </div>
+          </div>
+        </template>
       </div>
-      <template id="itemTemplate">
-        <div class="card py-2 mx-2" style="width: 18rem">
-            <img class="card-image card-img-top" src=" ..." alt="..." />
-            <div class="card-body">
-                <h5 class="card-name"></h5>
-                <p class="card-price"></p>
-                <br />
-                <p class="card-description"></p>
-                <a class="btn btn-primary card-href">EQUIP</a>
-
-            </div>
-        </div>
-     </template>
     </div>
     <div class="overflow-hidden" style="max-height: 30vh;">
     </div>
