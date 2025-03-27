@@ -8,7 +8,7 @@ firebase.auth().onAuthStateChanged(function (user) {
   } else {
     // ❌ user not logged in — send them to login page
     console.log("No user is logged in");
-    window.location.href = "/login.html";
+    window.location.href = "/login";
   }
 });
 
