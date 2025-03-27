@@ -66,13 +66,22 @@ Developed for the **BCIT CST 1800-Projects** course, this application applies **
 smartchoice/
 ├── public/
 │   ├── css/
-│   │   └── style.css
+│   │   ├── style.css
+│   │   ├── navbar.css
+│   │   ├── store.css
+│   │   ├── profile.css
+│   │   ├── game.css
+│   │   ├── learn.css
+│   │   ├── leaderboard.css
+│   │   ├── inventory.css
+│   │   ├── workouts.css
 │   ├── html/
+│   │   ├── carbohydrates.html
 │   │   ├── footer_loggedin.html
 │   │   ├── footer_loggedout.html
 │   │   ├── game.html
-│   │   ├── game_stage1.html
 │   │   ├── index.html
+│   │   ├── inventory.html
 │   │   ├── leaderboard.html
 │   │   ├── learn.html
 │   │   ├── login.html
@@ -80,16 +89,22 @@ smartchoice/
 │   │   ├── navbar_loggedin.html
 │   │   ├── navbar_loggedout.html
 │   │   ├── profile.html
+│   │   ├── protein.html
+│   │   ├── results.html
+│   │   ├── supplementation.html
+│   │   ├── vitamins.html
+│   │   ├── workouts.html
 │   │   └── store.html
 │   ├── images/
-│   └── js/
-│       └── main.js
 ├── scripts/
 │   ├── authentication.js
 │   ├── gameScript.js
+│   ├── inventory.js
+│   ├── leaderboard.js
 │   ├── profile.js
 │   ├── script.js
-│   └── skeleton.js
+│   ├── skeleton.js
+│   └── store.js
 ├── server.js
 └── README.md
 ```
@@ -110,6 +125,7 @@ smartchoice/
 - Currently limited to a small set of food comparisons
 - Basic game mechanics without progression levels
 - Limited educational content
+- Limited inventory system
 
 ### Future Work
 - Expand the food database with more diverse options
