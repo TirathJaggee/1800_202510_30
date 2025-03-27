@@ -27,7 +27,7 @@ var uiConfig = {
                    num_wrong: 0,
                    streak: 0,
                    inventory: [ 'cNVowJCaOA5iUMaJecl2' ],
-                   gems: 0                 //with authenticated user's ID (user.uid)
+                   gems: 600                 //with authenticated user's ID (user.uid)
             }).then(function () {
                    console.log("New user added to firestore");
                    window.location.assign("/main");       //re-direct to main.html after signup
