@@ -1,16 +1,79 @@
-.container {
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f1fcf4;
+    color: #1e1e1e;
+    line-height: 1.8;
+    margin: 0;
+    padding-bottom: 3rem;
+  }
+  
+  .hero {
+    background-color: #b2dfdb;
+    padding: 4rem 1rem;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    color: #00251a;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+    color: #00332d;
+    margin-top: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    color: #004c40;
+    margin-top: 1rem;
+  }
+  
+  .section {
+    background-color: #ffffff;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+  
+  .workout-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.card {
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.card a{
-    text-decoration: none;
-    color: #005a00;
-}
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    width: 18rem;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 1rem;
+    background-color: #f5fffc;
+  }
+  
+  .card-body h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #004d40;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-body p {
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
