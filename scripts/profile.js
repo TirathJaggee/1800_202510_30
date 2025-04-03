@@ -50,15 +50,19 @@ function populateUserInfo() {
             }
     });
 }
+
+// Edit user info
 function editUserInfo() {
     //Enable the form fields
     document.getElementById('personalInfoFields').disabled = false;
 }
 
+// Save user info
 function saveUserInfo() {
 
     userName = document.getElementById('nameInput').value;       //get the value of the field with id="nameInput"
     
+    // Update Firestore document
     currentUser.update({
         name: userName,
     })
@@ -69,6 +73,7 @@ function saveUserInfo() {
     document.getElementById('personalInfoFields').disabled = true;
 }
 
+// Graph stats
 function graphStats(numCorrect, numWrong) {
     const xValues = ["Correct", "Wrong"];
     const yValues = [numCorrect, numWrong];

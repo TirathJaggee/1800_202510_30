@@ -1,9 +1,11 @@
 let users = [];
 
+// Display leaderboard
 async function leads() {
     let snapshot = await db.collection('users').get();
     let uniqueUsers = new Map();
 
+    // Get user data
     snapshot.docs.forEach(doc => {
         let user = doc.data();
         let userName = user.name || "Unknown";
@@ -16,6 +18,7 @@ async function leads() {
 
         let score = user.score || 0; // Uses Firestore score field
 
+        // Add user to uniqueUsers map if not already present
         if (!uniqueUsers.has(userName)) {
             uniqueUsers.set(userName, {
                 name: userName,
@@ -35,6 +38,7 @@ async function leads() {
     // Update leaderboard items 
     let leaderboardItems = document.querySelectorAll(".leaderboard-item");
 
+    // Update leaderboard items
     leaderboardItems.forEach((item, i) => {
         if (topUsers[i]) {
             item.style.display = "flex"; // Ensure it's visible

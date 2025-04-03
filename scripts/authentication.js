@@ -27,7 +27,7 @@ var uiConfig = {
                    num_wrong: 0,
                    streak: 0,
                    inventory: [ 'cNVowJCaOA5iUMaJecl2' ],
-                   gems: 600                 //with authenticated user's ID (user.uid)
+                   gems: 600
             }).then(function () {
                    console.log("New user added to firestore");
                    window.location.assign("/main");       //re-direct to main.html after signup
@@ -49,13 +49,7 @@ var uiConfig = {
     signInFlow: 'popup',
     signInSuccessUrl: "/main",    
     signInOptions: [
-      // Leave the lines as is for the providers you want to offer your users.
-      //firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-      //firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-      //firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-      //firebase.auth.GithubAuthProvider.PROVIDER_ID,
-      firebase.auth.EmailAuthProvider.PROVIDER_ID,
-      //firebase.auth.PhoneAuthProvider.PROVIDER_ID
+      firebase.auth.EmailAuthProvider.PROVIDER_ID
     ],
     // Terms of service url.
     tosUrl: '<your-tos-url>',

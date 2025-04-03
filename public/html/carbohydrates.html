@@ -1,105 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>The SmartChoice</title>
-  <meta name="The SmartChoice" content="1800 Projects">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <head>
+    <title>The SmartChoice</title>
+    <meta name="The SmartChoice" content="1800 Projects">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap Library CSS CDN go here -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- Boostrap Library JS CDN  go here -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <!-- Other libraries go here -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <!-- Bootstrap Library CSS CDN go here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Boostrap Library JS CDN  go here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Other libraries go here -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
 
-  <!-------------------------------------------------------->
-  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-  <!-------------------------------------------------------->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <!-- Link to styles of your own -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/carbohydrates.css">
+    <!-- Google Icons (Material Design)-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/carbohydrates.css">
-  <!-- Google Icons (Material Design)-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <div id="navbarPlaceholder"></div>
 
+    <div class="hero">
+      <h1>All about carbohydrates!</h1>
+      <h2>SmartChoice, where you learn and have fun!</h2>
+      <p>Learn more about carbohydrates and their role in your body.</p>
+    </div>
 
+    <div class="section">
+      <h2 class="section-title">Carbohydrates</h2>
+      <h3>How carbs fit into a healthy diet</h3>
+      <p>As part of healthy eating, everyone needs the same type of things, such as vitamins, minerals, carbohydrates, protein and fat. These are called nutrients. Together, nutrients in food help the body work.</p>
+      <p>Carbohydrates are part of a healthy diet. But some carb choices may be better for you than others...</p>
+    </div>
 
-</head>
+    <div class="section">
+      <h3>What are carbohydrates?</h3>
+      <p>Carbohydrates are sugars in food... naturally found in fruits, vegetables, nuts, seeds, grains and dairy products.</p>
+    </div>
 
-<body>
-  
-  <div id="navbarPlaceholder"></div>
+    <div class="section">
+      <h2 class="section-title">Types of carbohydrates</h2>
+      <p>There are three main types of carbohydrates:</p>
+      <ul>
+        <li>Simple carbohydrates</li>
+        <li>Complex carbohydrates</li>
+        <li>Fiber</li>
+      </ul>
+    </div>
 
-<div class="hero">
-  <h1>All about carbohydrates!</h1>
-  <h2>SmartChoice, where you learn and have fun!</h2>
-  <p>Learn more about carbohydrates and their role in your body.</p>
-</div>
+    <div class="section">
+      <h3>Simple carbohydrates</h3>
+      <p>Simple carbohydrates are sugars... making them a quick source of energy.</p>
+    </div>
 
-<div class="section">
-  <h2 class="section-title">Carbohydrates</h2>
-  <h3>How carbs fit into a healthy diet</h3>
-  <p>As part of healthy eating, everyone needs the same type of things, such as vitamins, minerals, carbohydrates, protein and fat. These are called nutrients. Together, nutrients in food help the body work.</p>
-  <p>Carbohydrates are part of a healthy diet. But some carb choices may be better for you than others...</p>
-</div>
+    <div class="section">
+      <h3>Complex carbohydrates</h3>
+      <p>Complex carbohydrates are made up of long chains... a better source of energy.</p>
+    </div>
 
-<div class="section">
-  <h3>What are carbohydrates?</h3>
-  <p>Carbohydrates are sugars in food... naturally found in fruits, vegetables, nuts, seeds, grains and dairy products.</p>
-</div>
+    <div class="section">
+      <h3>Fiber</h3>
+      <p>Fiber is a type of carbohydrate that the body cannot digest... support overall health.</p>
+    </div>
 
-<div class="section">
-  <h2 class="section-title">Types of carbohydrates</h2>
-  <p>There are three main types of carbohydrates:</p>
-  <ul>
-    <li>Simple carbohydrates</li>
-    <li>Complex carbohydrates</li>
-    <li>Fiber</li>
-  </ul>
-</div>
-
-<div class="section">
-  <h3>Simple carbohydrates</h3>
-  <p>Simple carbohydrates are sugars... making them a quick source of energy.</p>
-</div>
-
-<div class="section">
-  <h3>Complex carbohydrates</h3>
-  <p>Complex carbohydrates are made up of long chains... a better source of energy.</p>
-</div>
-
-<div class="section">
-  <h3>Fiber</h3>
-  <p>Fiber is a type of carbohydrate that the body cannot digest... support overall health.</p>
-</div>
-
-<div id="footerPlaceholder"></div>
+    <div id="footerPlaceholder"></div>
 
 
 
-  <script src="/scripts/script.js"></script>
-  <script src="/scripts/firebaseAPI_BBY30.js"></script>
-  <script src="/scripts/skeleton.js"></script>
-  <script>
-    checkLogin();
-  </script>
-</body>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/firebaseAPI_BBY30.js"></script>
+    <script src="/scripts/skeleton.js"></script>
+    <script>
+      checkLogin();
+    </script>
+  </body>
 
 </html>

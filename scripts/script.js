@@ -1,3 +1,4 @@
+// Logout
 function logout() {
     firebase.auth().signOut().then(() => {
         // Sign-out successful.
@@ -7,6 +8,7 @@ function logout() {
       });
 }
 
+// Check login
 function checkLogin(){
   firebase.auth().onAuthStateChanged(function (user) {
     if (user) {

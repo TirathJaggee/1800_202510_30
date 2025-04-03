@@ -10,9 +10,10 @@ let wrongImage = "/images/wrong.png";
 let progressBar = document.getElementById("progressBar");
 let numOfQuestions = document.getElementById("numOfQuestions");
 
-
+// Display a question
 async function display() {
     const snapshot = await db.collection('questions').get();
+    // Update progress bar and question number
     if(rounds == 0) {
         progressBar.style.width = "0%";
         numOfQuestions.textContent = "Question 1 of 5";
@@ -30,8 +31,7 @@ async function display() {
         numOfQuestions.textContent = "Question 5 of 5";
     }
 
-
-    // console.log(snapshot.docs.map(doc => doc.data()));
+    // Select a random question
     i = Math.floor(Math.random() * snapshot.docs.length);
     while(usedQuestions.includes(snapshot.docs[i].id)) {
         i = Math.floor(Math.random() * snapshot.docs.length);
@@ -53,24 +53,25 @@ async function display() {
 
 
 
-    let question = snapshot.docs[i].data();
-    let questionId = snapshot.docs[i].id;
-    usedQuestions.push(questionId);
-    let correctAnswer = question.answer;
-    let description = question.description;
-    let image1 = question.image1;
-    let image2 = question.image2;
-    let firstImageDescription = question.image1_description;
-    let secondImageDescription = question.image2_description;
+    let question = snapshot.docs[i].data(); // Get the question data
+    let questionId = snapshot.docs[i].id; // Get the question ID
+    usedQuestions.push(questionId); // Add the question ID to the usedQuestions array
+    let correctAnswer = question.answer; // Get the correct answer
+    let description = question.description; // Get the question description
+    let image1 = question.image1; // Get the first image
+    let image2 = question.image2; // Get the second image
+    let firstImageDescription = question.image1_description; // Get the first image description
+    let secondImageDescription = question.image2_description; // Get the second image description
     
-    document.getElementById('description').textContent = description;
-    document.getElementById('firstImage').src = image1;
-    document.getElementById('secondImage').src = image2;
-    document.getElementById("firstImageDescription").textContent = firstImageDescription;
-    document.getElementById("secondImageDescription").textContent = secondImageDescription;
-    document.getElementById("firstImageButton").value = 1;
-    document.getElementById("secondImageButton").value = 2;
+    document.getElementById('description').textContent = description; // Set the question description
+    document.getElementById('firstImage').src = image1; // Set the first image
+    document.getElementById('secondImage').src = image2; // Set the second image
+    document.getElementById("firstImageDescription").textContent = firstImageDescription; // Set the first image description
+    document.getElementById("secondImageDescription").textContent = secondImageDescription; // Set the second image description
+    document.getElementById("firstImageButton").value = 1; // Set the first image button value
+    document.getElementById("secondImageButton").value = 2; // Set the second image button value
 
+    // Add event listeners for the first button
     document.getElementById("firstImageButton").addEventListener("click", () => {
         if (!clicked) {
             clicked = true;
@@ -85,6 +86,7 @@ async function display() {
         }
     });
     
+    // Add event listeners for the second button
     document.getElementById("secondImageButton").addEventListener("click", () => {
         if (!clicked) {
             clicked = true;
@@ -101,7 +103,9 @@ async function display() {
     
 }
 
+// Handle the answer
 function handleAnswer(selectedValue, correctAnswer) {
+    // Check if the answer is correct
     if(selectedValue == correctAnswer) {
         userScore++;
         clicked = false;
@@ -113,12 +117,15 @@ function handleAnswer(selectedValue, correctAnswer) {
         document.getElementById("secondImageButton").disabled = false;
     }
     
+    // Increment the rounds
     rounds++;
     
+    // Check if there are more rounds
     if(rounds < 5) {
+        // Display the next round
         display();
-        console.log("User Score: ", userScore);
     } else {
+        // Save the user score
         localStorage.setItem("userScoreLS", userScore);
         
         // Check if user is logged in
@@ -126,6 +133,7 @@ function handleAnswer(selectedValue, correctAnswer) {
             if (user) {
                 const currentUser = db.collection("users").doc(user.uid);
                 
+                // Get the user data
                 currentUser.get()
                     .then(userDoc => {
                         if (userDoc.exists) {
@@ -180,6 +188,7 @@ function handleAnswer(selectedValue, correctAnswer) {
     }
 }
 
+// Display results
 function displayResults() {
     document.getElementById('description').textContent = `You got ${localStorage.getItem("userScoreLS")} out of 5 correct!`;
     localStorage.setItem("userScoreLS", 0);

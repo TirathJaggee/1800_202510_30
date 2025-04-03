@@ -1,29 +1,24 @@
-// REQUIRES
+// Imports
 import express from "express";
 import fs from "fs";
 import cors from "cors";
 
-
+// App
 const app = express();
 const port = 8000;
 
-// const COMMENTS_FILE = "./app/data/comments.json";
-
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-
-// just like a simple web server like Apache web server
-// we are mapping file system paths to the app's virtual paths
+// Static folders
 app.use("/html", express.static("./public/html"));
 app.use("/js", express.static("./public/js"));
 app.use("/css", express.static("./public/css"));
 app.use("/images", express.static("./public/images"));
 app.use("/scripts", express.static("./scripts"));
 
-// // Serve static files from the 'public' folder (or adjust path accordingly)
-// app.use(express.static('public'));  // 'public' should contain your 'css' folder
-
+// Routes
 app.get("/", (req, res) => {
     let doc = fs.readFileSync("./public/html/index.html", "utf8");
     res.send(doc);
@@ -104,6 +99,12 @@ app.get("/inventory", (req, res) => {
     res.send(doc);
 });
 
+app.get("*", (req, res) => {
+    let doc = fs.readFileSync("./public/html/index.html", "utf8");
+    res.send(doc);
+});
+
+// Start server
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
 });

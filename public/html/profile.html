@@ -1,119 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>The SmartChoice</title>
-  <meta name="The SmartChoice" content="1800 Projects">
-  <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+  <head>
+    <title>The SmartChoice</title>
+    <meta name="The SmartChoice" content="1800 Projects">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bootstrap Library CSS CDN go here -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <!-- Boostrap Library JS CDN  go here -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
-  <!-- Other libraries go here -->
+    <!-- Bootstrap Library CSS CDN go here -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Boostrap Library JS CDN  go here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Other libraries go here -->
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-  <!-------------------------------------------------------->
-  <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
-  <!-------------------------------------------------------->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-  
+    <!-------------------------------------------------------->
+    <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
+    <!-------------------------------------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    
 
-  <!-- Link to styles of your own -->
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="/css/profile.css">
-  <!-- Google Icons (Material Design)-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Link to styles of your own -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/profile.css">
+    <!-- Google Icons (Material Design)-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-  <div id="navbarPlaceholder"></div>
+    <div id="navbarPlaceholder"></div>
 
-  <div class="px-4 pt-5 my-5 border-bottom text-center">
-    <h1 class="display-4 fw-bold">Profile: </h1>
-    <div class="container">
+    <div class="px-4 pt-5 my-5 border-bottom text-center">
+      <h1 class="display-4 fw-bold">Profile: </h1>
+      <div class="container">
         <form>
-            <fieldset class="mb-3" id="personalInfoFields" disabled>
-                <div class="form-group">
-                    <label ><h3>Name</h3></label>
-                    <input type="text" id="nameInput" class="form-control" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <label ><h3>Email</h3></label>
-                    <p id="emailInput" class="h5"></p>
-                </div>
-            </fieldset>
-            <div id="statsFieldsHeader" class="mb-3">
-                <h3>Statistics: </h3>
-                <canvas id="myChart"></canvas>
+          <fieldset class="mb-3" id="personalInfoFields" disabled>
+            <div class="form-group">
+              <label ><h3>Name</h3></label>
+              <input type="text" id="nameInput" class="form-control" placeholder="Name">
             </div>
-            <div id="statsFields" class="mb-3">
-                <div class="form-group">
-                    <h4>Score</h4>
-                    <p id="userScore" class="h5"></p>
-                </div>
-                <div class="form-group">
-                    <h4>Streak</h4>
-                    <p id="userStreak" class="h5"></p>
-                </div>
-                <div class="form-group">
-                    <h4>Correct Answers</h4>
-                    <p id="userNumCorrect" class="h5"></p>
-                </div>
-                <div class="form-group">
-                    <h4>Wrong Answers</h4>
-                    <p id="userNumWrong" class="h5"></p>
-                </div>
-              </div>
-              <div class="mb-3" id="gemsFields">
-                <h3>Total Gem$</h3>
-                <div class="form-group">
-                    <p id="userGems" class="h5"></p>
-                </div>
-                <a href="/inventory"><div class="btn btn-lg btn-warning form-group" id="inventoryButton">
-                    <label>Inventory</label></div></a>
+            <div class="form-group">
+              <label ><h3>Email</h3></label>
+              <p id="emailInput" class="h5"></p>
             </div>
+          </fieldset>
+          <div id="statsFieldsHeader" class="mb-3">
+            <h3>Statistics: </h3>
+            <canvas id="myChart"></canvas>
+          </div>
+          <div id="statsFields" class="mb-3">
+            <div class="form-group">
+              <h4>Score</h4>
+              <p id="userScore" class="h5"></p>
+            </div>
+            <div class="form-group">
+              <h4>Streak</h4>
+              <p id="userStreak" class="h5"></p>
+            </div>
+            <div class="form-group">
+              <h4>Correct Answers</h4>
+              <p id="userNumCorrect" class="h5"></p>
+            </div>
+            <div class="form-group">
+              <h4>Wrong Answers</h4>
+              <p id="userNumWrong" class="h5"></p>
+            </div>
+          </div>
+          <div class="mb-3" id="gemsFields">
+            <h3>Total Gem$</h3>
+            <div class="form-group">
+              <p id="userGems" class="h5"></p>
+            </div>
+            <a href="/inventory"><div class="btn btn-lg btn-warning form-group" id="inventoryButton">
+              <label>Inventory</label></div></a>
             </div>
             <div class="d-flex justify-content-end mt-5">
-                <button type="button" onclick="editUserInfo()" class="btn btn-secondary">Edit</button>
-                <span style="width: 10px"></span>
-                <button type="button" onclick="saveUserInfo()" class="btn btn-info">Save</button>
+              <button type="button" onclick="editUserInfo()" class="btn btn-secondary">Edit</button>
+              <span style="width: 10px"></span>
+              <button type="button" onclick="saveUserInfo()" class="btn btn-info">Save</button>
             </div>
         </form>
-</div>
-  </div>
+      </div>
+    </div>
 
-  <div id="footerPlaceholder">
-  </div>
+    <div id="footerPlaceholder"></div>
 
-
-  <script src="/scripts/script.js"></script>
-  <script src="/scripts/firebaseAPI_BBY30.js"></script>
-  <script src="/scripts/skeleton.js"></script>
-  <script src="/scripts/profile.js"></script>
-  <script>
-    checkLogin();
-    populateUserInfo();
-  </script>
-</body>
+    <script src="/scripts/script.js"></script>
+    <script src="/scripts/firebaseAPI_BBY30.js"></script>
+    <script src="/scripts/skeleton.js"></script>
+    <script src="/scripts/profile.js"></script>
+    <script>
+      checkLogin();
+      populateUserInfo();
+    </script>
+  </body>
 
 </html>
