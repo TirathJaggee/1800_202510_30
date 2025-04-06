@@ -1,13 +1,11 @@
 {
   "name": "1800_202510_30",
   "version": "1.0.0",
-  "description": "## Overview SmartChoice is an educational web application designed to help users develop a strong intuition about the nutritional value of different foods. Through an interactive game format, users can learn to make healthier dietary choices by comparing the caloric content of various food items.",
+  "description": "SmartChoice - An educational app to learn food nutrition via an interactive game.",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "install": "npm install express cors"
+    "start": "node server.js"
   },
   "author": "",
   "license": "ISC",
