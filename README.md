@@ -114,11 +114,6 @@ smartchoice/
 └── README.md
 ```
 
-## Contributors
-- **Alexander Fisher** - BCIT CST Student with a passion for video games and chilling.
-- **Nicolas Agostini** - BCIT CST Student, with a passion for technology and AI.
-- **Tirath Jaggee** - BCIT CST Student. Chose BCIT because the course is accelerated!
-
 ## Acknowledgments
 - **Bootstrap** framework for responsive design components
 - **Firebase** for authentication and database services
