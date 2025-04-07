@@ -33,162 +33,176 @@
 }
 
 
+/* Body styling */
 body {
-    background-color: #f2fbf2;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f5fbe7;
-    margin: 0;
-    padding: 0;
+  background-color: #f2fbf2; /* Light green background for a fresh look */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  height: 100vh; /* Full viewport height */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean and readable font */
+  background: #f5fbe7; /* Slightly different background override */
+  margin: 0;
+  padding: 0;
 }
 
-
+/* Header section */
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background: white;
+  display: flex;
+  justify-content: space-between; /* Space out elements left and right */
+  align-items: center; /* Vertically center items */
+  padding: 10px;
+  background: white;
 }
 
+/* Title inside the header */
 .title {
-    font-size: 20px;
-    color: green;
+  font-size: 20px;
+  color: green;
 }
 
-
+/* Leaderboard list container */
 .leaderboard {
-    list-style: none;
-    padding: 0;
-    margin: 0 20px;
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  margin: 0 20px; /* Horizontal margin for spacing */
 }
 
+/* Each item in the leaderboard */
 .leaderboard-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    background: white;
-   
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* Space between child items */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #ccc; /* Light grey border */
+  border-radius: 10px; /* Rounded corners */
+  background: white;
 }
 
-
+/* Rank number circle */
 .rank {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: black;
-    color: white;
-    border-radius: 50%;
-    font-weight: bold;
-    margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  color: white;
+  border-radius: 50%; /* Circle shape */
+  font-weight: bold;
+  margin-right: 10px;
 }
 
+/* User profile icon style */
 .user-icon {
-    font-size: 40px;
-    color: black;
-    border: 2px solid #000; 
-    border-radius: 50%; 
-    padding: 5px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    background: #f0f0f0; 
-    margin-right: 10px;
+  font-size: 40px;
+  color: black;
+  border: 2px solid #000;
+  border-radius: 50%; /* Circle */
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #f0f0f0; /* Light background */
+  margin-right: 10px;
 }
 
+/* Username text */
 .username {
-    flex: 1;
-    font-weight: bold;
-    margin-right: 10px;
+  flex: 1;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
+/* Container for score or other stats */
 .stats-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
-    justify-content: flex-end;
+  display: flex;
+  gap: 20px; /* Space between each stat */
+  flex-wrap: wrap; /* Wrap to next line on small screens */
+  justify-content: flex-end;
 }
 
+/* Score styling inside stats container */
 .stats-container .score {
-    font-weight: bold;
-    color: #4caf50; 
-  }
-  
+  font-weight: bold;
+  color: #4caf50; /* Green color */
+}
 
+/* General icon style */
 .icon {
-    font-size: 20px;
-    color: white;
+  font-size: 20px;
+  color: white;
 }
 
+/* Footer icon link styling */
 #footerIcons {
-    text-decoration: none;
-    color: rgb(2, 78, 55);
+  text-decoration: none;
+  color: rgb(2, 78, 55);
 }
 
-
+/* Responsive styling for smaller screens (mobile) */
 @media (max-width: 991px) {
-    #navbarBrand {
+
+  /* Responsive font size for navbar brand/logo */
+  #navbarBrand {
       font-size: 5vw;
       text-align: center;
       width: 100%;
-    }
-  
-    .leaderboard-item {
+  }
+
+  /* Adjust leaderboard item layout on small screens */
+  .leaderboard-item {
       flex-wrap: wrap; 
       align-items: flex-start;
       padding: 10px 15px;
       gap: 10px;
-    }
-  
-    .rank {
+  }
+
+  /* Smaller rank circle */
+  .rank {
       width: 28px;
       height: 28px;
       font-size: 14px;
-      flex-shrink: 0;
-    }
-  
-    .user-icon {
+      flex-shrink: 0; /* Prevent from shrinking */
+  }
+
+  /* Smaller user icon */
+  .user-icon {
       width: 42px;
       height: 42px;
       font-size: 28px;
       flex-shrink: 0;
-    }
-  
-    .username {
+  }
+
+  /* Responsive username font size and layout */
+  .username {
       font-size: 4vw;
       font-weight: bold;
       max-width: 100%;
       word-break: break-word;
       flex-grow: 1;
-    }
-  
-    .stats-container {
+  }
+
+  /* Stack stats vertically and adjust size */
+  .stats-container {
       display: flex;
       flex-direction: column;
       font-size: 3.5vw;
       gap: 4px;
       width: 100%;
       margin-left: 5px;
-    }
-  
-    .display-4 {
-      font-size: 6vw;
-    }
-  
-    .leaderboard {
-      padding: 0 10px;
-    }
-  
   }
-  
+
+  /* Resize display text */
+  .display-4 {
+      font-size: 6vw;
+  }
+
+  /* Adjust leaderboard padding on small screens */
+  .leaderboard {
+      padding: 0 10px;
+  }
+}
