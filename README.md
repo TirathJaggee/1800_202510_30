@@ -12,6 +12,11 @@ Developed for the **BCIT CST 1800-Projects** course, this application applies **
 - **Leaderboard** to track user progress and achievements
 - **Educational resources** about nutrition and healthy eating
 
+## Developers
+- **Alexander Fisher** - BCIT CST Student with a passion for video games and chilling.
+- **Nicolas Agostini** - BCIT CST Student with a passion for technology and AI.
+- **Tirath Jaggee** - BCIT CST Student. Chose BCIT because the course is accelerated!
+
 ## Technologies Used
 - **Frontend:** HTML, CSS, JavaScript, Bootstrap 5
 - **Backend:** Node.js, Express.js
@@ -134,6 +139,3 @@ smartchoice/
 - Develop a personalized learning path based on user performance
 - Implement social features to allow users to challenge friends
 - Create a mobile app version for improved accessibility
-
-## License
-This project is created for educational purposes as part of the **BCIT CST program**.
