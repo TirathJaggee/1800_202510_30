@@ -2,5 +2,4 @@
 *.logs
 node_modules/
 .vscode/
-firebaseAPI_BBY30.js
 test.js
